@@ -362,21 +362,30 @@
  },
  {
   "id": "C-012",
-  "claim": "21-string guzheng spans D2 (73.41 Hz, string 21) to D6 (1174.7 Hz, string 1) in a pentatonic layout with a Paulownia soundboard.",
+  "claim": "21-string guzheng spans D2 (73.41 Hz, string 21) to D6 (1174.7 Hz, string 1) in a pentatonic layout with a Paulownia soundboard. Order D-E-F#-A-B repeating (the BioResources text mislabels this set 'G major pentatonic'; the note names it lists are D major pentatonic).",
   "kind": "software",
   "load_bearing": true,
   "sources": [
    {
     "url": "https://bioresources.cnr.ncsu.edu/resources/acoustics-of-the-guzheng-chinese-plucked-zither/",
-    "doi": "",
+    "doi": "10.15376/biores.21.2.5306-5328",
     "title": "Acoustics of the Guzheng: Chinese plucked zither",
     "version": "",
     "locator": "BioResources 21(2), 5306-5328, abstract",
     "accessed": "2026-10-03",
     "tier": 1
+   },
+   {
+    "url": "https://springfieldsec.moe.edu.sg/files/Introduction%20To%20Guzheng%20.pdf",
+    "doi": "",
+    "title": "Introduction to Guzheng (tutorial, C. Chang)",
+    "version": "",
+    "locator": "Tuning: D major pentatonic, 21 strings, 4 octaves",
+    "accessed": "2026-10-03",
+    "tier": 3
    }
   ],
-  "confidence": "single-source",
+  "confidence": "corroborated",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -731,9 +740,9 @@
  },
  {
   "id": "C-025",
-  "claim": "DCMI (Database of Chinese Musical Instruments) offers per-instrument recordings of scales and techniques under a Creative Commons licence (variant TBD).",
+  "claim": "DCMI (Database of Chinese Musical Instruments) offers per-instrument recordings of scales and techniques under a Creative Commons licence (variant TBD). [Not used: licence variant unverified, so D-007 excludes it.]",
   "kind": "policy",
-  "load_bearing": true,
+  "load_bearing": false,
   "sources": [
    {
     "url": "https://dlfm.web.ox.ac.uk/sites/default/files/dlfm/documents/media/zijin-et-al-dcmi.pdf",
@@ -810,7 +819,7 @@
  },
  {
   "id": "C-028",
-  "claim": "Physically informed piano synthesis (hammer, string, soundboard) review: Avanzini et al., EURASIP J. Adv. Signal Process. 2003(10):464536 — basis for yangqin hammer model.",
+  "claim": "Physically informed piano synthesis (hammer, string, soundboard) review: Avanzini et al., EURASIP J. Adv. Signal Process. 2003(10):464536 — basis for yangqin hammer model. Corroborated for the contact law: power-law (Hunt-Crossley) contact force with damping, as used for finger contact in DAFx26.",
   "kind": "software",
   "load_bearing": true,
   "sources": [
@@ -822,9 +831,18 @@
     "locator": "abstract",
     "accessed": "2026-10-03",
     "tier": 1
+   },
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng et al. DAFx26",
+    "version": "",
+    "locator": "eq. (4)-(5): Hunt-Crossley contact Kf[eta]^alpha + damping",
+    "accessed": "2026-10-03",
+    "tier": 1
    }
   ],
-  "confidence": "single-source",
+  "confidence": "corroborated",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -1701,6 +1719,400 @@
   "informs": [
    "D-009 RT-safety test",
    "T-perf"
+  ]
+ },
+ {
+  "id": "C-056",
+  "claim": "JUCE 9.0.3 provides MPEInstrument/MPESynthesiser/MPEZoneLayout in juce_audio_basics/mpe; its VST3 wrapper implements IMidiMapping (per-channel controllers incl. kPitchBend) but no INoteExpressionController, so MPE in VST3 depends on the host delivering per-channel MIDI through the controller mapping.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/modules/juce_audio_basics/mpe",
+    "doi": "",
+    "title": "JUCE mpe module directory",
+    "version": "9.0.3",
+    "locator": "file list",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.cpp",
+    "doi": "",
+    "title": "JUCE VST3 wrapper",
+    "version": "9.0.3",
+    "locator": "lines 838, 1691, 3552; no NoteExpression symbols",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-015 MPE scope",
+   "A-007"
+  ]
+ },
+ {
+  "id": "C-057",
+  "claim": "AudioProcessor::getXmlFromBinary checks a magic number and bounds the string length by the buffer size (jmin(sizeInBytes-8, stringLength)) before parseXML; state parsing is therefore a fuzzable entry point that still relies on JUCE's XML parser robustness.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/modules/juce_audio_processors_headless/processors/juce_AudioProcessor.cpp",
+    "doi": "",
+    "title": "JUCE AudioProcessor.cpp",
+    "version": "9.0.3",
+    "locator": "lines 968-979",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-016 state format",
+   "T-security fuzz state"
+  ]
+ },
+ {
+  "id": "C-058",
+  "claim": "CMake added the 'Visual Studio 18 2026' generator in 4.2 (toolset v145); the pinned CMake 4.4.3 therefore supports VS 2026 on windows-2025 runners.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://cmake.org/cmake/help/latest/generator/Visual%20Studio%2018%202026.html",
+    "doi": "",
+    "title": "CMake docs: Visual Studio 18 2026",
+    "version": "",
+    "locator": "'Added in version 4.2'",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://cmake.org/cmake/help/v4.4/_sources/release/4.2.rst.txt",
+    "doi": "",
+    "title": "CMake 4.2 release notes",
+    "version": "",
+    "locator": "Generators",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-012 Windows generator"
+  ]
+ },
+ {
+  "id": "C-059",
+  "claim": "OSV.dev API supports POST /v1/query and /v1/querybatch by git commit hash ({\"commit\": \"<sha>\"}) with no documented rate limit; osv-scanner uses the same endpoint.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://google.github.io/osv.dev/post-v1-querybatch",
+    "doi": "",
+    "title": "OSV API: POST /v1/querybatch",
+    "version": "",
+    "locator": "Payload",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.com/google/osv-scanner/blob/v1.7.3/pkg/osv/osv.go",
+    "doi": "",
+    "title": "osv-scanner osv.go",
+    "version": "",
+    "locator": "MakeCommitRequest",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-014 dependency scan"
+  ]
+ },
+ {
+  "id": "C-060",
+  "claim": "Pinned commits: JUCE tag 9.0.3 = be29c81492b6151c8ea8d14c840e1311963b3a83; Catch2 v3.16.0 (peeled) = 317ac1ed4c0bb6e6b91eafc817e05c488feffcb3; tuning-library = 48422e2f014fcda8dd5d1a4678bb2674faf3bb3e.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE.git",
+    "doi": "",
+    "title": "git ls-remote",
+    "version": "",
+    "locator": "refs/tags/9.0.3",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.com/catchorg/Catch2.git",
+    "doi": "",
+    "title": "git ls-remote",
+    "version": "",
+    "locator": "refs/tags/v3.16.0^{}",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "plan/ENVIRONMENT.md",
+   "D-014"
+  ]
+ },
+ {
+  "id": "C-061",
+  "claim": "AU validation on macOS CI: copy the .component to ~/Library/Audio/Plug-Ins/Components, `killall -9 AudioComponentRegistrar`, then `auval -strict -v aumu <subtype> <manufacturer>`; on macOS >= 15 auval is a symlink to auvaltool.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://docs.rs/crate/clap-wrapper/0.1.1/source/.github/workflows/validate.yml",
+    "doi": "",
+    "title": "clap-wrapper validate workflow",
+    "version": "",
+    "locator": "Run auval step",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://moonbase.sh/articles/debugging-your-audio-unit-plugin-with-auval-aka-auvaltool/",
+    "doi": "",
+    "title": "Debugging your AU with auvaltool",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://gist.github.com/olilarkin/8f378d212b0a59944d84f9f47061d70f",
+    "doi": "",
+    "title": "Plugin dev notes (Larkin)",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 4
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-012 auval step"
+  ]
+ },
+ {
+  "id": "C-062",
+  "claim": "DWG bow-string junction (Smith, PASP): outgoing waves = incoming + rho_hat(v_d+)*v_d+, with rho_hat = r/(1+r), r = 0.25*R_b(v_d)/R_s; for R_b >= 0, rho_hat lies in [0,1), so the junction is passive; nut reflects velocity waves with sign inversion; losses/dispersion are lumped into reflection filters.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://ccrma.stanford.edu/~jos/BowedStrings/Bow_String_Scattering_Junction.html",
+    "doi": "",
+    "title": "Smith, Digital Waveguide Modeling of Bowed Strings",
+    "version": "",
+    "locator": "Bow-String Scattering Junction",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://ccrma.stanford.edu/%7Ejos/pasp/Bow_String_Scattering_Junction.html",
+    "doi": "",
+    "title": "Smith, Physical Audio Signal Processing (2010)",
+    "version": "",
+    "locator": "§ Bow-String Scattering Junction",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://ccrma.stanford.edu/~jos/pasp/Digital_Waveguide_Bowed_String.html",
+    "doi": "",
+    "title": "Smith, PASP: Digital Waveguide Bowed-String",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a",
+   "T-stability passivity"
+  ]
+ },
+ {
+  "id": "C-063",
+  "claim": "With the DAFx26 loss model (eq. 2), mode n of a string of vibrating length Lv decays at sigma_n = s0 + s1*(n*pi/Lv)^2, so T60_n = 3 ln10 / sigma_n; for the yehu F4 string (Lv=0.295 m) T60 = 5.44 s (n=1), 1.21 s (n=4), 0.23 s (n=10). Values in S-06 OUTPUT.json serve as a decay oracle.",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng et al. DAFx26",
+    "version": "",
+    "locator": "eq. (2), Table 1",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-06-decay-oracle/OUTPUT.json",
+    "doi": "",
+    "title": "Spike S-06",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "T-acoustic decay (yehu, banhu)"
+  ]
+ },
+ {
+  "id": "C-064",
+  "claim": "Plucking in DWG can be modelled as a structurally passive scattering junction (finger/plectrum compliance as a spring, optional nonlinear 'feathering' compliance), which guarantees stability independent of the excitation; earlier balanced finger/pick perturbation (Eckerholm & Evangelista 2008) and plectrum modelling (Germain & Evangelista, WASPAA 2009, 25-28) exist.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/details/gRgxA2XugKVViFx_I_4gOg",
+    "doi": "",
+    "title": "Evangelista & Smith, Structurally Passive Scattering Element for Modelling Guitar Pluck Action (DAFx-2010)",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://dafx.de/paper-archive/details/XJTIoSIXj3qqer3WzLlEHQ",
+    "doi": "",
+    "title": "Eckerholm & Evangelista, The PluckSynth touch string (DAFx-2008)",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://www-archive.idmil.org/_export/xhtml/people/francois_g._germain",
+    "doi": "",
+    "title": "Germain & Evangelista WASPAA-09 citation",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004b plectrum/nail excitation",
+   "T-stability"
+  ]
+ },
+ {
+  "id": "C-065",
+  "claim": "Harp acoustics usable for the konghou analogy: strings couple through the soundboard producing sympathetic string modes, captured by a waveguide model of strings on an equivalent beam (Le Carrou, Gautier & Badeau, Acta Acust. 95(4):744-752, 2009); harp soundboard admittance measurements (Waltham et al., JASA 124:1774-1780).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://researchportal.ip-paris.fr/en/publications/sympathetic-string-modes-in-the-concert-harp/",
+    "doi": "",
+    "title": "Sympathetic string modes in the concert harp",
+    "version": "",
+    "locator": "abstract; Acta Acust. 95(4) 744-752",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://jcaa.caa-aca.ca/index.php/jcaa/article/download/2108/1855/2245",
+    "doi": "",
+    "title": "Waltham et al., harp soundboard (Canadian Acoustics 2008)",
+    "version": "",
+    "locator": "references: JASA 124, 1774-1780",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004c konghou"
+  ]
+ },
+ {
+  "id": "C-066",
+  "claim": "Idiomatic technique inventories exist with annotations: guzheng — chanyin (vibrato), boxian, shanghua/xiahua (up/down slides), glissando (huazhi/guazou), yaozhi (tremolo), dianyin (point note), harmonics; huqin — CCOM-HuQin playing-technique clips across subtypes; pipa — PipaSet technique taxonomy.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://huggingface.co/datasets/ccmusic-database/Guzheng_Tech99",
+    "doi": "",
+    "title": "Guzheng_Tech99 dataset card",
+    "version": "",
+    "locator": "technique labels",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://www.promptlayer.com/models/gzisotech",
+    "doi": "",
+    "title": "GZ_IsoTech model card",
+    "version": "",
+    "locator": "8 techniques",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://arxiv.org/abs/2209.06496v1",
+    "doi": "",
+    "title": "CCOM-HuQin",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://hal.sorbonne-universite.fr/hal-03950855/document",
+    "doi": "",
+    "title": "PipaSet and TEAS",
+    "version": "",
+    "locator": "Taxonomy of playing techniques",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-017 technique set",
+   "A-007"
   ]
  }
 ]

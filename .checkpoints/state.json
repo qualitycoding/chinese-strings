@@ -7,9 +7,9 @@
   "mode_flags": {
     "software.deploys": false
   },
-  "phase": "1",
-  "subphase": "1.3",
-  "research_round": 3,
+  "phase": "2",
+  "subphase": "2B",
+  "research_round": 5,
   "exploration_round": 0,
   "proof_review_round": 0,
   "premortem_round": 0,
@@ -21,11 +21,13 @@
     "1.3.R1",
     "1.3.round-1",
     "1.3.round-2",
-    "1.3.round-3"
+    "1.3.round-3",
+    "1.3.round-4",
+    "1.3.round-5",
+    "1.3.saturation",
+    "1.4"
   ],
   "pending": [
-    "1.3.round-4",
-    "1.4",
     "2B",
     "2E",
     "3",
@@ -45,13 +47,18 @@
   "artifacts": {
     "plan/PROFILE.md": "a21b77301d15bc4b0486bffe362572e88455f9342b09ea54010e909864471cf0",
     "plan/ASSUMPTIONS.md": "a7ecd2a58dfbd650a630289fd619d37666c770047abda170333fc46e215caad8",
-    "plan/DECISIONS.md": "bffb943fb4d185cb91537859a5e4e08c7458a16dc6cad7b48e579d3a156ac4b2",
-    "research/QUESTIONS.md": "378d7bc14d093a5a54ce00209357fabb2e76290c416d3d80a96df7155e33c8ad",
-    "research/claims.json": "2beb9133d12ee08db3c987e304bbbf091a71a5569cd0780f84c404216b80c56e",
-    "research/SOURCES.md": "916bc237796db859984f9eee8f45bd7111938919297c90124d38dd6d869dfe0a",
+    "plan/DECISIONS.md": "f8268647b9a3ba6886610f1045b5bd4f56f952b700c28ca1e4cc795cb523ce75",
+    "plan/ENVIRONMENT.md": "245e9aa64ff66c031485327ad72338bc1b431ec7ecc5dbbddddf350a7e5dbf8e",
+    "plan/deps.lock.json": "b2fc985b73ab7fd8aeb54c4fd9bab09551272dd9683963d447f9b7291b04af3e",
+    "research/QUESTIONS.md": "f7ed82b3cb206b65a65def35f35d6aff39a0e09bf9c46b2f81be05b8268c73e4",
+    "research/claims.json": "97471fc0be01a791fb3503590144e4fe4c055ebd581b85bb3c6a4e1cefd46b0a",
+    "research/SOURCES.md": "82af645987644f4e9261cf66f13dce146fbcee13e7c74b9e88210323bf50f634",
+    "premortem/RISK_REGISTER.md": "933e71eadaec9fed81344440f8c51d18e2080018331d8f621fae5e8fd300effc",
     "research/rounds/round-1.md": "fb5de505904a9ac2af6e24f73ce2dcf26f218bed39401d54c6b806047f127dcc",
     "research/rounds/round-2.md": "6e408cd528c35a5fc75f1e3a441c923b255c976316d7e73e6de4685c36ee417d",
-    "research/rounds/round-3.md": "bf0b24e415da5deaabd62adcad0c0ef06e80ac29eb958a9ab01cdc13c08f9e66"
+    "research/rounds/round-3.md": "bf0b24e415da5deaabd62adcad0c0ef06e80ac29eb958a9ab01cdc13c08f9e66",
+    "research/rounds/round-4.md": "64f158834ac1962500da0b0d37e2a91ecdf3aa0d0905ca6c59dbb0cdead9db8c",
+    "research/rounds/round-5.md": "2b13f4645c911b9b6f26faa25befd2aea262b617ed8a820cdcf1e8c46e046046"
   },
   "environment": {
     "subagents": false,
@@ -89,13 +96,7 @@
     }
   ],
   "open_items": [
-    "Q-P09 MPE",
-    "Q-P10 state format",
-    "Q-D07 reference values",
-    "Q-D10/Q-D15 DWG + bow passivity",
-    "Q-Q04 OSV commit query",
-    "VS2026 generator",
-    "auval explicit verification"
+    "R-001..R-004 carried to Phase 4"
   ],
-  "updated_at": "2026-10-03T15:43:36Z"
+  "updated_at": "2026-10-03T15:51:10Z"
 }
