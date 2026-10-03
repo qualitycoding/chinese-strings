@@ -2114,5 +2114,47 @@
    "D-017 technique set",
    "A-007"
   ]
+ },
+ {
+  "id": "C-067",
+  "claim": "The yehudafx26 reference code (commit 284e5be2) differs from the DAFx26 paper's Table 1: rho 1300 for both strings (paper 1250/1350), f0 344/513 Hz (paper F4/C5), sigma0 string 2 = 1.5884 (paper 1.5844), bridge 0.08 m from the stub giving a 0.30 m vibrating length. The code additionally provides 11 bridge modes (M,K,R) and a 25-section parallel radiation filter designed at 44.1 kHz, not tabulated in the paper. Plan uses paper values for strings and code values only for body/radiation (S-07).",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/yehudafx26/yehudafx26/blob/284e5be25eaf55fdd366b8d9f3917a10da8ee6a4/examples/yehuParams.m",
+    "doi": "",
+    "title": "yehuParams.m",
+    "version": "284e5be2",
+    "locator": "STRING/BODY PARAMETERS",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-07-yehu-body/OUTPUT.txt",
+    "doi": "",
+    "title": "Spike S-07",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng et al. DAFx26",
+    "version": "",
+    "locator": "Table 1",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-019 yehu/banhu body",
+   "plan/deps.lock.json"
+  ]
  }
 ]

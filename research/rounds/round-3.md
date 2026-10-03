@@ -11,7 +11,7 @@ Executed by: Opus 5.5, single context (A-016). Claims C-045..C-055 added; C-039 
 ## R3 Synthesis
 1. **Gaohu tuning contradiction resolved:** JAMIS states "a fourth or fifth higher" — both observed tunings are in practice. D-011 ships G4-D5 default plus A4-E5 alternative.
 2. **Banhu ↔ yehu:** both are coconut-body, wooden-face fiddles (C-045). Banhu is parameterised from the measured yehu body (C-034) with its own tuning — an analogy with a strong structural basis.
-3. **Final instrument list (D-003):** see DECISIONS.md. 22 instruments retained; dropped: gehu/diyingehu (modern cello-like hybrids, no data), zhuihu, qinqin, leiqin (insufficient organology/acoustics), Tier C (C-044).
+3. **Final instrument list (D-003):** see DECISIONS.md. 19 instruments retained (corrected from an arithmetic error "22" in the first draft of this log); dropped: gehu/diyingehu (modern cello-like hybrids, no data), zhuihu, qinqin, leiqin (insufficient organology/acoustics), Tier C (C-044).
 4. **Scope is large (22 instruments).** Plan must stage delivery by family with human listening gates per family (G-003a..d), so value is delivered early and the plan can stop cleanly.
 5. **A-012 feasibility confirmed** for DWG (C-054: 16 voices ≈ 8 % of a 1-vCPU sandbox core).
 6. **RT-safety test technique** verified (C-055).

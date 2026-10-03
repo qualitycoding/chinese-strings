@@ -1,17 +1,56 @@
 {
   "schema": "cs-deps-lock/1",
   "fetchcontent": [
-    {"name": "JUCE", "repo": "https://github.com/juce-framework/JUCE.git", "tag": "9.0.3", "commit": "be29c81492b6151c8ea8d14c840e1311963b3a83", "license": "AGPL-3.0-only OR JUCE-9-commercial (used under AGPLv3)"},
-    {"name": "Catch2", "repo": "https://github.com/catchorg/Catch2.git", "tag": "v3.16.0", "commit": "317ac1ed4c0bb6e6b91eafc817e05c488feffcb3", "license": "BSL-1.0"},
-    {"name": "tuning-library", "repo": "https://github.com/surge-synthesizer/tuning-library.git", "tag": null, "commit": "48422e2f014fcda8dd5d1a4678bb2674faf3bb3e", "license": "MIT"}
+    {
+      "name": "JUCE",
+      "repo": "https://github.com/juce-framework/JUCE.git",
+      "tag": "9.0.3",
+      "commit": "be29c81492b6151c8ea8d14c840e1311963b3a83",
+      "license": "AGPL-3.0-only OR JUCE-9-commercial (used under AGPLv3)"
+    },
+    {
+      "name": "Catch2",
+      "repo": "https://github.com/catchorg/Catch2.git",
+      "tag": "v3.16.0",
+      "commit": "317ac1ed4c0bb6e6b91eafc817e05c488feffcb3",
+      "license": "BSL-1.0"
+    },
+    {
+      "name": "tuning-library",
+      "repo": "https://github.com/surge-synthesizer/tuning-library.git",
+      "tag": null,
+      "commit": "48422e2f014fcda8dd5d1a4678bb2674faf3bb3e",
+      "license": "MIT"
+    }
   ],
   "tools": [
-    {"name": "pluginval", "version": "v1.0.4", "url_linux": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_Linux.zip",
-     "sha256_linux_zip": "c01c49d8063965c4c2dea8324468336768f5c9139e0b1caebde14c2400b55352",
-     "url_macos": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_macOS.zip",
-     "url_windows": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_Windows.zip",
-     "note": "macOS/Windows zip hashes are recorded by step S-002 on first download and committed to this file"},
-    {"name": "cmake", "version": "4.4.3", "source": "PyPI"},
-    {"name": "ninja", "version": "1.13.2", "source": "PyPI"}
+    {
+      "name": "pluginval",
+      "version": "v1.0.4",
+      "url_linux": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_Linux.zip",
+      "sha256_linux_zip": "c01c49d8063965c4c2dea8324468336768f5c9139e0b1caebde14c2400b55352",
+      "url_macos": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_macOS.zip",
+      "url_windows": "https://github.com/Tracktion/pluginval/releases/download/v1.0.4/pluginval_Windows.zip",
+      "note": "macOS/Windows zip hashes are recorded by step S-002 on first download and committed to this file"
+    },
+    {
+      "name": "cmake",
+      "version": "4.4.3",
+      "source": "PyPI"
+    },
+    {
+      "name": "ninja",
+      "version": "1.13.2",
+      "source": "PyPI"
+    }
+  ],
+  "data_sources": [
+    {
+      "name": "yehudafx26",
+      "repo": "https://github.com/yehudafx26/yehudafx26.git",
+      "commit": "284e5be25eaf55fdd366b8d9f3917a10da8ee6a4",
+      "license": "MIT",
+      "used_for": "research/spikes/S-07-yehu-body/yehu_body.json (bridge modes, radiation filter)"
+    }
   ]
 }
