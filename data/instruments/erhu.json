@@ -1,0 +1,77 @@
+{
+ "key": "erhu",
+ "displayName": "Erhu",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": true,
+ "midiLow": 62,
+ "midiHigh": 93,
+ "citations": [
+  "C-032",
+  "C-033",
+  "C-048",
+  "D-019"
+ ],
+ "strings": [
+  {
+   "openHz": 293.6647679174076,
+   "vibratingLengthM": 0.387,
+   "tensionN": 51.68,
+   "densityKgM3": 6577.0,
+   "radiusM": 0.00022,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 440.0,
+   "vibratingLengthM": 0.387,
+   "tensionN": 51.5,
+   "densityKgM3": 8363.0,
+   "radiusM": 0.00013,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 533.7,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 848.2,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1091.7,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1165.5,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1428.2,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1476.6,
+   "t60s": 0.05,
+   "gain": 1.0
+  }
+ ],
+ "radiation": "none"
+}

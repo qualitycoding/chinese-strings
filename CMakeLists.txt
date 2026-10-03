@@ -11,8 +11,14 @@ FetchContent_Declare(Catch2 GIT_REPOSITORY https://github.com/catchorg/Catch2.gi
 FetchContent_Declare(tuning_library GIT_REPOSITORY https://github.com/surge-synthesizer/tuning-library.git GIT_TAG 48422e2f014fcda8dd5d1a4678bb2674faf3bb3e)
 FetchContent_Declare(JUCE GIT_REPOSITORY https://github.com/juce-framework/JUCE.git GIT_TAG be29c81492b6151c8ea8d14c840e1311963b3a83)
 
-add_library(cs_core STATIC core/src/Stubs.cpp)
-target_include_directories(cs_core PUBLIC core/include)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+file(GLOB CS_INSTRUMENT_JSON CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/data/instruments/*.json ${CMAKE_SOURCE_DIR}/data/bodies/*.json)
+set(CS_GEN_TABLES ${CMAKE_BINARY_DIR}/generated/InstrumentTables.cpp)
+add_custom_command(OUTPUT ${CS_GEN_TABLES}
+  COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/tools/gen_instruments.py ${CMAKE_SOURCE_DIR}/data ${CS_GEN_TABLES}
+  DEPENDS ${CMAKE_SOURCE_DIR}/tools/gen_instruments.py ${CS_INSTRUMENT_JSON} VERBATIM)
+add_library(cs_core STATIC core/src/Stubs.cpp core/src/Instruments.cpp ${CS_GEN_TABLES})
+target_include_directories(cs_core PUBLIC core/include PRIVATE core/src)
 
 if(CS_BUILD_PLUGIN)
   FetchContent_MakeAvailable(JUCE)

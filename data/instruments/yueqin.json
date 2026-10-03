@@ -1,0 +1,132 @@
+{
+ "key": "yueqin",
+ "displayName": "Yueqin",
+ "family": "PluckedLute",
+ "maxPolyphony": 4,
+ "stopsAllStringsTogether": false,
+ "midiLow": 57,
+ "midiHigh": 86,
+ "citations": [
+  "C-015",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 220.0,
+   "vibratingLengthM": 0.4,
+   "tensionN": 71.5257709176341,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00035,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 220.0,
+   "vibratingLengthM": 0.4,
+   "tensionN": 71.5257709176341,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00035,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 293.6647679174076,
+   "vibratingLengthM": 0.4,
+   "tensionN": 81.56443855938534,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00028,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 293.6647679174076,
+   "vibratingLengthM": 0.4,
+   "tensionN": 81.56443855938534,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00028,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24
+ ],
+ "bodyModes": [
+  {
+   "freqHz": 130.0,
+   "t60s": 0.15,
+   "gain": 1
+  },
+  {
+   "freqHz": 260.0,
+   "t60s": 0.1,
+   "gain": 0.8
+  },
+  {
+   "freqHz": 507.0,
+   "t60s": 0.08,
+   "gain": 0.6
+  },
+  {
+   "freqHz": 806.0,
+   "t60s": 0.06,
+   "gain": 0.5
+  },
+  {
+   "freqHz": 1170.0,
+   "t60s": 0.05,
+   "gain": 0.4
+  },
+  {
+   "freqHz": 1820.0,
+   "t60s": 0.04,
+   "gain": 0.3
+  },
+  {
+   "freqHz": 2860.0,
+   "t60s": 0.03,
+   "gain": 0.2
+  }
+ ],
+ "radiation": "none"
+}

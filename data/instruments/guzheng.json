@@ -1,0 +1,329 @@
+{
+ "key": "guzheng",
+ "displayName": "Guzheng",
+ "family": "Zither",
+ "maxPolyphony": 21,
+ "stopsAllStringsTogether": false,
+ "midiLow": 38,
+ "midiHigh": 86,
+ "citations": [
+  "C-012",
+  "C-013",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 73.41619197935188,
+   "vibratingLengthM": 1.2,
+   "tensionN": 474.01527192117265,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0009000000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 82.4068892282175,
+   "vibratingLengthM": 1.155,
+   "tensionN": 514.0331060089209,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0008675000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 92.4986056779086,
+   "vibratingLengthM": 1.1099999999999999,
+   "tensionN": 554.1794220920627,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.000835,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 110.0,
+   "vibratingLengthM": 1.065,
+   "tensionN": 666.4012183897319,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0008025,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 123.47082531403103,
+   "vibratingLengthM": 1.02,
+   "tensionN": 709.0414272139367,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0007700000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 146.8323839587038,
+   "vibratingLengthM": 0.975,
+   "tensionN": 840.500730321768,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0007375000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 164.81377845643496,
+   "vibratingLengthM": 0.9299999999999999,
+   "tensionN": 880.4248204031855,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0007050000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 184.9972113558172,
+   "vibratingLengthM": 0.885,
+   "tensionN": 914.0345180675366,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0006725000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 220.0,
+   "vibratingLengthM": 0.84,
+   "tensionN": 1054.6904076430656,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00064,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 246.94165062806206,
+   "vibratingLengthM": 0.7949999999999999,
+   "tensionN": 1072.4489535545263,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0006075,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 293.6647679174076,
+   "vibratingLengthM": 0.75,
+   "tensionN": 1209.2692845597048,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.000575,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 329.6275569128699,
+   "vibratingLengthM": 0.7050000000000001,
+   "tensionN": 1198.3560055487808,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0005425,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 369.9944227116344,
+   "vibratingLengthM": 0.66,
+   "tensionN": 1169.444707680132,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00051,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 440.0,
+   "vibratingLengthM": 0.615,
+   "tensionN": 1258.8194679653802,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0004775,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 493.8833012561241,
+   "vibratingLengthM": 0.5700000000000001,
+   "tensionN": 1183.2582265756876,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0004450000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 587.3295358348151,
+   "vibratingLengthM": 0.525,
+   "tensionN": 1219.8075291756222,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00041250000000000005,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 659.2551138257398,
+   "vibratingLengthM": 0.48,
+   "tensionN": 1090.2291680142787,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00038,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 739.9888454232688,
+   "vibratingLengthM": 0.43500000000000005,
+   "tensionN": 943.4080824142094,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00034750000000000004,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 880.0,
+   "vibratingLengthM": 0.39,
+   "tensionN": 881.2046502823438,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00031499999999999996,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 987.7666025122483,
+   "vibratingLengthM": 0.3450000000000001,
+   "tensionN": 698.7871096303566,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.0002825000000000001,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 1174.6590716696303,
+   "vibratingLengthM": 0.29999999999999993,
+   "tensionN": 585.2040394088551,
+   "densityKgM3": 6000.0,
+   "radiusM": 0.00025,
+   "youngsModulusPa": 120000000000.0,
+   "sigma0": 0.8,
+   "sigma1": 0.001,
+   "material": "SilkWoundSteel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 90,
+   "t60s": 0.2,
+   "gain": 1
+  },
+  {
+   "freqHz": 150,
+   "t60s": 0.15,
+   "gain": 0.8
+  },
+  {
+   "freqHz": 230,
+   "t60s": 0.12,
+   "gain": 0.7
+  },
+  {
+   "freqHz": 340,
+   "t60s": 0.1,
+   "gain": 0.6
+  },
+  {
+   "freqHz": 480,
+   "t60s": 0.08,
+   "gain": 0.5
+  },
+  {
+   "freqHz": 700,
+   "t60s": 0.06,
+   "gain": 0.4
+  },
+  {
+   "freqHz": 1000,
+   "t60s": 0.05,
+   "gain": 0.3
+  }
+ ],
+ "radiation": "none"
+}

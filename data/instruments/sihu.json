@@ -1,0 +1,102 @@
+{
+ "key": "sihu",
+ "displayName": "Sihu",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": true,
+ "midiLow": 50,
+ "midiHigh": 81,
+ "citations": [
+  "C-047",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 146.8323839587038,
+   "vibratingLengthM": 0.45,
+   "tensionN": 27.288007208802952,
+   "densityKgM3": 6577.0,
+   "radiusM": 0.000275,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 146.8323839587038,
+   "vibratingLengthM": 0.45,
+   "tensionN": 27.288007208802952,
+   "densityKgM3": 6577.0,
+   "radiusM": 0.000275,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 220.0,
+   "vibratingLengthM": 0.45,
+   "tensionN": 31.544122263618554,
+   "densityKgM3": 8363.0,
+   "radiusM": 0.000175,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 220.0,
+   "vibratingLengthM": 0.45,
+   "tensionN": 31.544122263618554,
+   "densityKgM3": 8363.0,
+   "radiusM": 0.000175,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 426.96,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 678.56,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 873.36,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 932.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1142.56,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1181.28,
+   "t60s": 0.05,
+   "gain": 1.0
+  }
+ ],
+ "radiation": "none"
+}

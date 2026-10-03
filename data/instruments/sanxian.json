@@ -1,0 +1,85 @@
+{
+ "key": "sanxian",
+ "displayName": "Sanxian",
+ "family": "PluckedLute",
+ "maxPolyphony": 3,
+ "stopsAllStringsTogether": false,
+ "midiLow": 38,
+ "midiHigh": 74,
+ "citations": [
+  "C-018",
+  "C-041",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 73.41619197935188,
+   "vibratingLengthM": 0.75,
+   "tensionN": 15.635920427955346,
+   "densityKgM3": 1140.0,
+   "radiusM": 0.0006,
+   "youngsModulusPa": 4000000000.0,
+   "sigma0": 1.2,
+   "sigma1": 0.004,
+   "material": "Nylon",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 97.99885899543733,
+   "vibratingLengthM": 0.75,
+   "tensionN": 19.34725203640246,
+   "densityKgM3": 1140.0,
+   "radiusM": 0.0005,
+   "youngsModulusPa": 4000000000.0,
+   "sigma0": 1.2,
+   "sigma1": 0.004,
+   "material": "Nylon",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 146.8323839587038,
+   "vibratingLengthM": 0.75,
+   "tensionN": 27.79719187192063,
+   "densityKgM3": 1140.0,
+   "radiusM": 0.0004,
+   "youngsModulusPa": 4000000000.0,
+   "sigma0": 1.2,
+   "sigma1": 0.004,
+   "material": "Nylon",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 300,
+   "t60s": 0.04,
+   "gain": 1
+  },
+  {
+   "freqHz": 520,
+   "t60s": 0.03,
+   "gain": 0.8
+  },
+  {
+   "freqHz": 830,
+   "t60s": 0.03,
+   "gain": 0.6
+  },
+  {
+   "freqHz": 1200,
+   "t60s": 0.02,
+   "gain": 0.5
+  },
+  {
+   "freqHz": 1700,
+   "t60s": 0.02,
+   "gain": 0.4
+  }
+ ],
+ "radiation": "none"
+}

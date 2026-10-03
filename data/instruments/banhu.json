@@ -1,0 +1,103 @@
+{
+ "key": "banhu",
+ "displayName": "Banhu",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": true,
+ "midiLow": 74,
+ "midiHigh": 105,
+ "citations": [
+  "C-045",
+  "C-034",
+  "C-067",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 587.3295358348151,
+   "vibratingLengthM": 0.33,
+   "tensionN": 150.2708108977565,
+   "densityKgM3": 6577.0,
+   "radiusM": 0.00022,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 880.0,
+   "vibratingLengthM": 0.33,
+   "tensionN": 149.77933204462258,
+   "densityKgM3": 8363.0,
+   "radiusM": 0.00013,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 438.849,
+   "t60s": 0.14434,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 567.857,
+   "t60s": 0.04161,
+   "gain": 0.574350153
+  },
+  {
+   "freqHz": 3041.859,
+   "t60s": 0.00765,
+   "gain": 0.471723536
+  },
+  {
+   "freqHz": 1145.721,
+   "t60s": 0.02557,
+   "gain": 0.224567917
+  },
+  {
+   "freqHz": 1892.085,
+   "t60s": 0.04018,
+   "gain": 0.074994613
+  },
+  {
+   "freqHz": 2118.148,
+   "t60s": 0.02159,
+   "gain": 0.035370009
+  },
+  {
+   "freqHz": 2819.223,
+   "t60s": 0.01397,
+   "gain": 0.123957226
+  },
+  {
+   "freqHz": 776.06,
+   "t60s": 0.10686,
+   "gain": 0.012633172
+  },
+  {
+   "freqHz": 1304.037,
+   "t60s": 0.07689,
+   "gain": 0.009164462
+  },
+  {
+   "freqHz": 1525.979,
+   "t60s": 0.38326,
+   "gain": 0.003207562
+  },
+  {
+   "freqHz": 2123.954,
+   "t60s": 0.10647,
+   "gain": 0.002707402
+  }
+ ],
+ "radiation": "yehu"
+}

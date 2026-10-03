@@ -1,0 +1,146 @@
+{
+ "key": "guqin",
+ "displayName": "Guqin",
+ "family": "Zither",
+ "maxPolyphony": 7,
+ "stopsAllStringsTogether": false,
+ "midiLow": 36,
+ "midiHigh": 50,
+ "citations": [
+  "C-011",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 65.40639132514966,
+   "vibratingLengthM": 1.1,
+   "tensionN": 52.03859927806132,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.0008,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 73.41619197935188,
+   "vibratingLengthM": 1.1,
+   "tensionN": 53.84742861534696,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.0007250000000000001,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 87.30705785825097,
+   "vibratingLengthM": 1.1,
+   "tensionN": 61.211168086084164,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.0006500000000000001,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 97.99885899543733,
+   "vibratingLengthM": 1.1,
+   "tensionN": 60.35079218314257,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.0005750000000000001,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 110.0,
+   "vibratingLengthM": 1.1,
+   "tensionN": 57.49507255151022,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.0005,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 130.8127826502993,
+   "vibratingLengthM": 1.1,
+   "tensionN": 58.7466999662489,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.000425,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 146.8323839587038,
+   "vibratingLengthM": 1.1,
+   "tensionN": 50.19784070681576,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.00035000000000000005,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 72.0,
+   "t60s": 0.2,
+   "gain": 1
+  },
+  {
+   "freqHz": 120.0,
+   "t60s": 0.15,
+   "gain": 0.8
+  },
+  {
+   "freqHz": 184.0,
+   "t60s": 0.12,
+   "gain": 0.7
+  },
+  {
+   "freqHz": 272.0,
+   "t60s": 0.1,
+   "gain": 0.6
+  },
+  {
+   "freqHz": 384.0,
+   "t60s": 0.08,
+   "gain": 0.5
+  },
+  {
+   "freqHz": 560.0,
+   "t60s": 0.06,
+   "gain": 0.4
+  },
+  {
+   "freqHz": 800.0,
+   "t60s": 0.05,
+   "gain": 0.3
+  }
+ ],
+ "radiation": "none"
+}

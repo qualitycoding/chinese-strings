@@ -1,0 +1,76 @@
+{
+ "key": "jinghu",
+ "displayName": "Jinghu",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": true,
+ "midiLow": 74,
+ "midiHigh": 105,
+ "citations": [
+  "C-046",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 587.3295358348151,
+   "vibratingLengthM": 0.3,
+   "tensionN": 98.75318165024431,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.00045,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 880.0,
+   "vibratingLengthM": 0.3,
+   "tensionN": 134.11082047056397,
+   "densityKgM3": 1250.0,
+   "radiusM": 0.00035,
+   "youngsModulusPa": 10000000000.0,
+   "sigma0": 0.9754,
+   "sigma1": 0.0026,
+   "material": "Silk",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 1067.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1696.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 2183.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 2331.0,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 2856.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 2953.2,
+   "t60s": 0.05,
+   "gain": 1.0
+  }
+ ],
+ "radiation": "none"
+}

@@ -7,10 +7,6 @@
 #include "cs/Tuning.h"
 #define CS_NI(name) throw ::cs::NotImplemented(name)
 namespace cs {
-const InstrumentSpec& spec(InstrumentId) { CS_NI("spec"); }
-std::optional<InstrumentId> instrumentFromKey(std::string_view) { CS_NI("instrumentFromKey"); }
-double inharmonicityB(const StringSpec&) { CS_NI("inharmonicityB"); }
-bool supportsTechnique(InstrumentId, Technique) { CS_NI("supportsTechnique"); }
 ParamRange paramRange(ParamId) { CS_NI("paramRange"); }
 const char* paramKey(ParamId) { CS_NI("paramKey"); }
 TuningTable TuningTable::equal(double) { CS_NI("TuningTable::equal"); }

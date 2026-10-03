@@ -1,0 +1,76 @@
+{
+ "key": "matouqin",
+ "displayName": "Matouqin",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": false,
+ "midiLow": 55,
+ "midiHigh": 84,
+ "citations": [
+  "C-019",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 195.99771799087463,
+   "vibratingLengthM": 0.6,
+   "tensionN": 160.4738472907365,
+   "densityKgM3": 1140.0,
+   "radiusM": 0.0009,
+   "youngsModulusPa": 4000000000.0,
+   "sigma0": 1.2,
+   "sigma1": 0.004,
+   "material": "Nylon",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 261.6255653005986,
+   "vibratingLengthM": 0.6,
+   "tensionN": 198.56381228661905,
+   "densityKgM3": 1140.0,
+   "radiusM": 0.00075,
+   "youngsModulusPa": 4000000000.0,
+   "sigma0": 1.2,
+   "sigma1": 0.004,
+   "material": "Nylon",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 280,
+   "t60s": 0.08,
+   "gain": 1
+  },
+  {
+   "freqHz": 460,
+   "t60s": 0.06,
+   "gain": 0.8
+  },
+  {
+   "freqHz": 700,
+   "t60s": 0.05,
+   "gain": 0.6
+  },
+  {
+   "freqHz": 1050,
+   "t60s": 0.04,
+   "gain": 0.5
+  },
+  {
+   "freqHz": 1600,
+   "t60s": 0.03,
+   "gain": 0.4
+  },
+  {
+   "freqHz": 2400,
+   "t60s": 0.02,
+   "gain": 0.3
+  }
+ ],
+ "radiation": "none"
+}

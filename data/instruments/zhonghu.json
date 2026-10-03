@@ -1,0 +1,76 @@
+{
+ "key": "zhonghu",
+ "displayName": "Zhonghu",
+ "family": "Bowed",
+ "maxPolyphony": 1,
+ "stopsAllStringsTogether": true,
+ "midiLow": 55,
+ "midiHigh": 86,
+ "citations": [
+  "C-039",
+  "D-019",
+  "DD"
+ ],
+ "strings": [
+  {
+   "openHz": 195.99771799087463,
+   "vibratingLengthM": 0.45,
+   "tensionN": 48.621701285853774,
+   "densityKgM3": 6577.0,
+   "radiusM": 0.000275,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  },
+  {
+   "openHz": 293.6647679174076,
+   "vibratingLengthM": 0.45,
+   "tensionN": 56.205236179039815,
+   "densityKgM3": 8363.0,
+   "radiusM": 0.000175,
+   "youngsModulusPa": 200000000000.0,
+   "sigma0": 0.6,
+   "sigma1": 0.0002,
+   "material": "Steel",
+   "courses": 1,
+   "courseDetuneCents": 0.0
+  }
+ ],
+ "fretSemitones": [],
+ "bodyModes": [
+  {
+   "freqHz": 426.96,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 678.56,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 873.36,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 932.4,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1142.56,
+   "t60s": 0.05,
+   "gain": 1.0
+  },
+  {
+   "freqHz": 1181.28,
+   "t60s": 0.05,
+   "gain": 1.0
+  }
+ ],
+ "radiation": "none"
+}
