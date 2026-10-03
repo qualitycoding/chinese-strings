@@ -1,8 +1,19 @@
 # chinese-strings
 
-Physical-modelling VST3 / AU / Standalone plugin reproducing Chinese stringed instruments
-(huqin family, pipa, ruan, guzheng, guqin, yangqin and more).
+Physical-modelling plugin (VST3, AU on macOS, Standalone) for 19 Chinese stringed instruments, built with digital
+waveguides — no samples.
 
-Status: planning. The execution plan lives on the `gen-*` planning branch.
+**Instruments (19)** — bowed: erhu, yehu, gaohu, zhonghu, banhu, jinghu, sihu, matouqin · plucked lutes: pipa, liuqin,
+yueqin, xiaoruan, zhongruan, daruan, sanxian · zithers/harp: guzheng, guqin, konghou · struck: yangqin.
 
-Licence: source code is Apache-2.0. Binaries built against JUCE 8 are distributed under AGPLv3 terms.
+Status: under implementation (see `plan/PLAN.md`).
+
+## Licence
+Source code: Apache-2.0 (`LICENSE`). Distributed plugin binaries link JUCE under the AGPLv3; they are therefore
+distributed under AGPLv3 terms. See `NOTICE`.
+
+## Dropped instruments
+No usable published acoustic/organological data was found for: gehu, diyingehu, zhuihu, qinqin, leiqin, rawap, dutar,
+satar, dombra, se, zhu, yazheng. They may be added by a future plan.
+
+## Known limitations
