@@ -17,8 +17,11 @@ set(CS_GEN_TABLES ${CMAKE_BINARY_DIR}/generated/InstrumentTables.cpp)
 add_custom_command(OUTPUT ${CS_GEN_TABLES}
   COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/tools/gen_instruments.py ${CMAKE_SOURCE_DIR}/data ${CS_GEN_TABLES}
   DEPENDS ${CMAKE_SOURCE_DIR}/tools/gen_instruments.py ${CS_INSTRUMENT_JSON} VERBATIM)
-add_library(cs_core STATIC core/src/Stubs.cpp core/src/StringDesign.cpp core/src/StringClasses.cpp core/src/Instruments.cpp core/src/FractionalDelay.cpp core/src/BowJunction.cpp core/src/ModalBank.cpp ${CS_GEN_TABLES})
-target_include_directories(cs_core PUBLIC core/include PRIVATE core/src)
+FetchContent_MakeAvailable(tuning_library)
+add_library(cs_core STATIC core/src/StringDesign.cpp core/src/StringClasses.cpp core/src/Tuning.cpp core/src/Params.cpp core/src/Fingering.cpp core/src/Designs.cpp core/src/PluckedVoice.cpp core/src/Engine.cpp core/src/EngineHost.cpp core/src/Instruments.cpp core/src/FractionalDelay.cpp core/src/BowJunction.cpp core/src/ModalBank.cpp ${CS_GEN_TABLES})
+find_package(Threads REQUIRED)
+target_link_libraries(cs_core PUBLIC Threads::Threads)
+target_include_directories(cs_core PUBLIC core/include PRIVATE core/src ${tuning_library_SOURCE_DIR}/include)
 
 if(CS_BUILD_PLUGIN)
   FetchContent_MakeAvailable(JUCE)
