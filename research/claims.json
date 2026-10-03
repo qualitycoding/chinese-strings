@@ -1,0 +1,780 @@
+[
+ {
+  "id": "C-001",
+  "claim": "Latest JUCE releases: 9.0.3 (2026-09-28); 9.0.0 (2026-07-21); last 8.x is 8.0.15 (2026-07-21).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/juce-framework/JUCE/releases",
+    "doi": "",
+    "title": "JUCE GitHub releases",
+    "version": "",
+    "locator": "tag list",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.com/juce-framework/JUCE.git",
+    "doi": "",
+    "title": "git ls-remote --tags",
+    "version": "",
+    "locator": "refs/tags/9.0.3",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-001"
+  ]
+ },
+ {
+  "id": "C-002",
+  "claim": "JUCE 9 modules are dual-licensed AGPLv3 / JUCE 9 commercial licence.",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://raw.githubusercontent.com/juce-framework/JUCE/9.0.3/LICENSE.md",
+    "doi": "",
+    "title": "JUCE LICENSE.md",
+    "version": "9.0.3",
+    "locator": "lines 1-12",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/JUCE",
+    "doi": "",
+    "title": "JUCE (Wikipedia)",
+    "version": "",
+    "locator": "infobox",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-002"
+  ]
+ },
+ {
+  "id": "C-003",
+  "claim": "JUCE 9.0.3 requires C++17 or later and CMake >= 3.22.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/CMakeLists.txt",
+    "doi": "",
+    "title": "JUCE CMakeLists.txt",
+    "version": "9.0.3",
+    "locator": "cmake_minimum_required",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/modules/juce_core/system/juce_CompilerSupport.h",
+    "doi": "",
+    "title": "juce_CompilerSupport.h",
+    "version": "9.0.3",
+    "locator": "line 112",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-001",
+   "plan/ENVIRONMENT.md"
+  ]
+ },
+ {
+  "id": "C-004",
+  "claim": "JUCE 9.0.3 ships a juce_audio_processors_headless module (GUI-free processor code).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/tree/9.0.3/modules",
+    "doi": "",
+    "title": "JUCE modules directory",
+    "version": "9.0.3",
+    "locator": "modules/juce_audio_processors_headless",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-005",
+   "Q-P03"
+  ]
+ },
+ {
+  "id": "C-005",
+  "claim": "Steinberg VST3 SDK is MIT-licensed from 3.8.0; JUCE bundles VST3 SDK 3.8.0 since 8.0.11.",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/steinbergmedia/vst3sdk/license",
+    "doi": "",
+    "title": "vst3sdk licence (GitHub API)",
+    "version": "",
+    "locator": "spdx_id=MIT",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://www.kvraudio.com/news/juce-8-0-11-now-available-65579",
+    "doi": "",
+    "title": "JUCE 8.0.11 Now Available (KVR)",
+    "version": "",
+    "locator": "Dependency Updates",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-002"
+  ]
+ },
+ {
+  "id": "C-006",
+  "claim": "pluginval latest release is v1.0.4 (2024-12-04), GPLv3; headless validation via `--strictness-level N`; level 5 is the commonly accepted host-compatibility floor; exit code 0 on pass.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/Tracktion/pluginval",
+    "doi": "",
+    "title": "pluginval README",
+    "version": "v1.0.4",
+    "locator": "Running in Headless Mode",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://api.github.com/repos/Tracktion/pluginval/releases",
+    "doi": "",
+    "title": "pluginval releases",
+    "version": "",
+    "locator": "v1.0.4",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-006",
+   "T-integration"
+  ]
+ },
+ {
+  "id": "C-007",
+  "claim": "Apache-2.0 code may be combined into a GPLv3/AGPLv3 work (one-way compatibility); the combined binary is then distributed under AGPLv3.",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [],
+  "confidence": "inferred",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-002"
+  ]
+ },
+ {
+  "id": "C-008",
+  "claim": "Erhu: two steel strings (standard since 1958), python-skin membrane on a hexagonal soundbox ~10 cm across; lowest membrane mode reported around 2 kHz.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://wiki.ubc.ca/Course:PHYS341/Erhu_Acoustics",
+    "doi": "",
+    "title": "Erhu Acoustics (UBC PHYS341 wiki)",
+    "version": "",
+    "locator": "Python-Skin section; ref [4]",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004a",
+   "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-009",
+  "claim": "Samejima (2023) extends bowed-string analysis to include soundbox and neck dynamics and applies it to physical-modelling synthesis of the erhu.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "",
+    "title": "Vibration analysis of a bowed string involving dynamics of a soundbox and neck ... Erhu",
+    "version": "",
+    "locator": "Acoust. Sci. Tech. 44(3) pp.281-291 (2023), abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a"
+  ]
+ },
+ {
+  "id": "C-010",
+  "claim": "Zheng, Darabundit & Scavone (DAFx-2026) model the yehu with FD stiff strings coupled at the bridge, elasto-plastic bow friction, finger contact, a modal bridge from measured admittance, and radiation as parallel 2nd-order filters; reported real-time capable.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/details/njxaREEfAYRrBTy_qRHkVw",
+    "doi": "",
+    "title": "Physical Model of the Chinese Yehu for Sound Synthesis",
+    "version": "",
+    "locator": "DAFx-2026 abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004a"
+  ]
+ },
+ {
+  "id": "C-011",
+  "claim": "Waltham, Lan & Koster (2016) measured five qin: low-frequency radiation comes from frame bending modes, higher from cavity modes.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://phas.ubc.ca/acoustics-qin",
+    "doi": "10.1121/1.4944874",
+    "title": "Acoustics of the qin",
+    "version": "",
+    "locator": "J. Acoust. Soc. Am. 139, 1592 (2016)",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://physicstoday.aip.org/news/sounding-out-the-qin",
+    "doi": "",
+    "title": "Sounding out the qin (Physics Today)",
+    "version": "",
+    "locator": "news summary",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004c",
+   "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-012",
+  "claim": "21-string guzheng spans D2 (73.41 Hz, string 21) to D6 (1174.7 Hz, string 1) in a pentatonic layout with a Paulownia soundboard.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://bioresources.cnr.ncsu.edu/resources/acoustics-of-the-guzheng-chinese-plucked-zither/",
+    "doi": "",
+    "title": "Acoustics of the Guzheng: Chinese plucked zither",
+    "version": "",
+    "locator": "BioResources 21(2), 5306-5328, abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "T-layout"
+  ]
+ },
+ {
+  "id": "C-013",
+  "claim": "Guzheng soundboard modal analyses (experimental + FE) exist for whole-board and composite structures.",
+  "kind": "software",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "https://j.bjfu.edu.cn/en/article/doi/10.12171/j.1000-1522.20210495",
+    "doi": "10.12171/j.1000-1522.20210495",
+    "title": "Vibration mode of Guzheng soundboard with composite structure",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://j.bjfu.edu.cn/en/article/doi/10.12171/j.1000-1522.20210136",
+    "doi": "10.12171/j.1000-1522.20210136",
+    "title": "Guzheng resonance panel whole-board modal analysis",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004c"
+  ]
+ },
+ {
+  "id": "C-014",
+  "claim": "Pipa has four strings and about 30 frets giving ~3.5 octaves; Chen & Huang (2011) built a digital-waveguide pipa model with technique rules, validated by spectra and listening tests.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://ir.lib.nycu.edu.tw/handle/11536/18926",
+    "doi": "10.1109/JSTSP.2011.2162816",
+    "title": "Sound Synthesis of the Pipa Based on Computed Timbre Analysis and Physical Modeling",
+    "version": "",
+    "locator": "IEEE JSTSP 5(6):1170-1179, abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004b"
+  ]
+ },
+ {
+  "id": "C-015",
+  "claim": "Waltham et al. (2013) measured acoustic radiation of the pipa and yueqin.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://www.phas.ubc.ca/node/9061/printable/print",
+    "doi": "",
+    "title": "Acoustic Radiation from the Pipa and Yueqin",
+    "version": "",
+    "locator": "Proc. Mtgs. Acoust. 22, 035004 (2013)",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004b",
+   "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-016",
+  "claim": "Yangqin soundboard (7 transverse ribs) modes 100-700 Hz; bass-bridge impedance peaks ~100 Hz then falls ~6 dB/oct; treble-bridge impedance broad maximum ~2 kHz.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://huskiecommons.lib.niu.edu/allgraduate-thesesdissertations/6648",
+    "doi": "",
+    "title": "Tsai, Vibrations of a yangqin soundboard (MS thesis, NIU 1991)",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://auditory.org/asamtgs/asa94mit/5pMU/5pMU4.html",
+    "doi": "",
+    "title": "ASA 127th meeting 5pMU4",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004d",
+   "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-017",
+  "claim": "Pfeifle (2011, JASA) measured ruan sound-hole radiation (distinct cavity modes, measurable Helmholtz frequency) and built a real-time FD physical model of the ruan.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://labs.sonicfield.org/library/measurement-and-physical-modelling-of-sound-hole-radiations-of-lutes",
+    "doi": "",
+    "title": "Measurement and physical modelling of sound hole radiations of lutes",
+    "version": "",
+    "locator": "index entry (JASA 2011)",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004b"
+  ]
+ },
+ {
+  "id": "C-018",
+  "claim": "Sanxian: three fretless strings over a python-skin-faced (front and back) resonator, plectrum-played, intervals 4th then 5th, northern (~46 in) and southern (~37 in) sizes; no acoustic measurement study located.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://wmic.net/?p=25894",
+    "doi": "",
+    "title": "China 'Sanxian' (North) - HWMC catalogue citing Grove Dictionary of Musical Instruments",
+    "version": "",
+    "locator": "description",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://timbreandorchestration.org/all-instruments/ensembles/chinese-orchestra/plucked-strings/in-depth",
+    "doi": "",
+    "title": "Plucked Strings in-depth",
+    "version": "",
+    "locator": "Sanxian",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004b"
+  ]
+ },
+ {
+  "id": "C-019",
+  "claim": "Matouqin (Inner Mongolian): two nylon (formerly horsehair) strings tuned g-c', snake-skin face in some variants; modern Mongolian national model has a wooden soundboard with f-holes; no acoustic measurement study located.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://www.geidai.ac.jp/labs/koizumi/english/gcato/html-text/322.html",
+    "doi": "",
+    "title": "Koizumi collection 322 morin xuur",
+    "version": "",
+    "locator": "catalogue entry",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://omeka-s.grinnell.edu/s/MusicalInstruments/item/1836",
+    "doi": "",
+    "title": "morin huur (Grinnell)",
+    "version": "",
+    "locator": "Description",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003"
+  ]
+ },
+ {
+  "id": "C-020",
+  "claim": "CCOM-HuQin dataset (CC BY 4.0): 11,992 single playing-technique clips and 57 annotated pieces across huqin subtypes.",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://arxiv.org/abs/2209.06496v1",
+    "doi": "",
+    "title": "CCOM-HuQin",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://transactions.ismir.net/articles/146/files/64aea0d7ed24c.xml",
+    "doi": "",
+    "title": "CCOM-HuQin (TISMIR)",
+    "version": "",
+    "locator": "licence block",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-007",
+   "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-021",
+  "claim": "CCMusic guzheng datasets (Guzheng_Tech99, GZ_IsoTech) are licensed CC BY-NC-ND 4.0.",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://huggingface.co/datasets/ccmusic-database/Guzheng_Tech99",
+    "doi": "",
+    "title": "Guzheng_Tech99 dataset card",
+    "version": "",
+    "locator": "license field",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://huggingface.co/datasets/ccmusic-database/GZ_IsoTech",
+    "doi": "",
+    "title": "GZ_IsoTech dataset card",
+    "version": "",
+    "locator": "license field",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-007"
+  ]
+ },
+ {
+  "id": "C-022",
+  "claim": "Python-skin membranes are strongly humidity-sensitive versus polycarbonate imitation skins.",
+  "kind": "software",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "https://hrmars.com/index.php/IJARPED/article/view/20734",
+    "doi": "",
+    "title": "Effect of Humidity ... Leiqin",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-011 (optional 'skin condition' parameter)"
+  ]
+ },
+ {
+  "id": "C-023",
+  "claim": "Commercial hybrid-modelled yangqin exists (Sound Magic); establishes market prior art only.",
+  "kind": "software",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "https://www.kvraudio.com/marketplace/yangqin-by-sound-magic",
+    "doi": "",
+    "title": "Yangqin by Sound Magic",
+    "version": "",
+    "locator": "product page",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": []
+ },
+ {
+  "id": "C-024",
+  "claim": "Catch2 latest v3.16.0 (2026-08-25); GoogleTest latest v1.18.0 (2026-08-10).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/catchorg/Catch2/releases",
+    "doi": "",
+    "title": "Catch2 releases",
+    "version": "",
+    "locator": "v3.16.0",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://api.github.com/repos/google/googletest/releases",
+    "doi": "",
+    "title": "googletest releases",
+    "version": "",
+    "locator": "v1.18.0",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-005"
+  ]
+ },
+ {
+  "id": "C-025",
+  "claim": "DCMI (Database of Chinese Musical Instruments) offers per-instrument recordings of scales and techniques under a Creative Commons licence (variant TBD).",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dlfm.web.ox.ac.uk/sites/default/files/dlfm/documents/media/zijin-et-al-dcmi.pdf",
+    "doi": "",
+    "title": "DCMI: A Database of Chinese Musical Instruments",
+    "version": "",
+    "locator": "Description of the database",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-007",
+   "Q-D08"
+  ]
+ },
+ {
+  "id": "C-026",
+  "claim": "PipaSet is a multimodal pipa performance dataset with technique annotations (licence TBD).",
+  "kind": "policy",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "https://hal.sorbonne-universite.fr/hal-03950855/document",
+    "doi": "",
+    "title": "PipaSet and TEAS",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-007"
+  ]
+ },
+ {
+  "id": "C-027",
+  "claim": "Bowed-string friction modelling literature: McIntyre, Schumacher & Woodhouse (1983) JASA 74(5) 1325-1345; Woodhouse (2004) thermal friction model, Acta Acustica 90, 579-589; Smith (1986) waveguide bow-string.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [],
+  "confidence": "inferred",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a"
+  ]
+ },
+ {
+  "id": "C-028",
+  "claim": "Physically informed piano synthesis (hammer, string, soundboard) review: Avanzini et al., EURASIP J. Adv. Signal Process. 2003(10):464536 — basis for yangqin hammer model.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://doaj.org/article/98fdbb25c07b41f7829ef0e567c2acef",
+    "doi": "",
+    "title": "Physically Informed Signal Processing Methods for Piano Sound Synthesis",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004d"
+  ]
+ },
+ {
+  "id": "C-029",
+  "claim": "Waltham (2018) presents a simple model of the erhu soundbox.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://phas.ubc.ca/node/10264/printable/print",
+    "doi": "10.1121/2.0000947",
+    "title": "A simple model of the Erhu soundbox",
+    "version": "",
+    "locator": "Proc. Mtgs. Acoust. 35, 035002 (2018)",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a",
+   "T-acoustic"
+  ]
+ }
+]

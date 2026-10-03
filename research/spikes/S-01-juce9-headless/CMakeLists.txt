@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.22)
+project(S01 VERSION 0.0.1 LANGUAGES C CXX)
+set(CMAKE_CXX_STANDARD 20)
+include(FetchContent)
+FetchContent_Declare(JUCE GIT_REPOSITORY https://github.com/juce-framework/JUCE.git GIT_TAG 9.0.3 GIT_SHALLOW TRUE)
+FetchContent_MakeAvailable(JUCE)
+juce_add_console_app(s01 PRODUCT_NAME "s01")
+target_sources(s01 PRIVATE main.cpp)
+target_compile_definitions(s01 PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0)
+target_link_libraries(s01 PRIVATE juce::juce_audio_basics juce::juce_dsp juce::juce_audio_processors_headless
+  juce::juce_recommended_config_flags juce::juce_recommended_warning_flags)
