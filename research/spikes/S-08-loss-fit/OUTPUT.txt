@@ -1,0 +1,39 @@
+fs=44100 f0=110: max rel ln-error=8.29%  g=0.992620 a=0.822192 max|H|=0.992620
+fs=44100 f0=349.23: max rel ln-error=3.37%  g=0.997393 a=0.329241 max|H|=0.997393
+fs=44100 f0=880: max rel ln-error=5.43%  g=0.999009 a=0.043559 max|H|=0.999009
+fs=48000 f0=110: max rel ln-error=8.28%  g=0.992618 a=0.835323 max|H|=0.992618
+fs=48000 f0=349.23: max rel ln-error=3.26%  g=0.997388 a=0.357320 max|H|=0.997388
+fs=48000 f0=880: max rel ln-error=4.74%  g=0.998994 a=0.050200 max|H|=0.998994
+fs=96000 f0=110: max rel ln-error=8.24%  g=0.992612 a=0.913845 max|H|=0.992612
+fs=96000 f0=349.23: max rel ln-error=2.85%  g=0.997365 a=0.586530 max|H|=0.997365
+fs=96000 f0=880: max rel ln-error=1.98%  g=0.998935 a=0.151562 max|H|=0.998935
+--- pole-zero first-order shelf x gain: H = g*(1-a)/(1-b) * (1 - b z^-1)/(1 - a z^-1), 0<=b<a<1 ---
+fs=44100 f0=110: max rel ln-error=8.29%  g=0.992621 a=0.822225 b=0.007581 max|H|=0.992621
+fs=44100 f0=349.23: max rel ln-error=3.60%  g=0.997406 a=0.336755 b=0.028543 max|H|=0.997406
+fs=44100 f0=880: max rel ln-error=5.43%  g=0.999009 a=0.043559 b=0.000000 max|H|=0.999009
+fs=48000 f0=110: max rel ln-error=8.28%  g=0.992619 a=0.835335 b=0.003551 max|H|=0.992619
+fs=48000 f0=349.23: max rel ln-error=3.27%  g=0.997388 a=0.357350 b=0.000000 max|H|=0.997388
+fs=48000 f0=880: max rel ln-error=4.74%  g=0.998994 a=0.050200 b=0.000000 max|H|=0.998994
+fs=96000 f0=110: max rel ln-error=8.24%  g=0.992612 a=0.913848 b=0.006291 max|H|=0.992612
+fs=96000 f0=349.23: max rel ln-error=3.04%  g=0.997375 a=0.592171 b=0.094947 max|H|=0.997375
+fs=96000 f0=880: max rel ln-error=1.98%  g=0.998935 a=0.151562 b=0.000000 max|H|=0.998935
+--- cascade of two one-pole low-passes x gain (3 parameters) ---
+--- 5-tap symmetric linear-phase FIR (3 free coefficients), |H| = |c0 + 2 c1 cos w + 2 c2 cos 2w| ---
+two-pole fs=44100 f0=110: max rel ln-error=6.84%  max|H|=0.991510
+two-pole fs=44100 f0=349.23: max rel ln-error=2.03%  max|H|=0.997321
+two-pole fs=44100 f0=880: max rel ln-error=5.01%  max|H|=0.999000
+two-pole fs=48000 f0=110: max rel ln-error=7.04%  max|H|=0.991526
+two-pole fs=48000 f0=349.23: max rel ln-error=1.94%  max|H|=0.997315
+two-pole fs=48000 f0=880: max rel ln-error=4.22%  max|H|=0.998983
+two-pole fs=96000 f0=110: max rel ln-error=7.70%  max|H|=0.992515
+two-pole fs=96000 f0=349.23: max rel ln-error=1.56%  max|H|=0.997295
+two-pole fs=96000 f0=880: max rel ln-error=1.51%  max|H|=0.998924
+fir5 fs=44100 f0=110: max rel ln-error=89.90%  max|H|=0.978369
+fir5 fs=44100 f0=349.23: max rel ln-error=23.95%  max|H|=0.996117
+fir5 fs=44100 f0=880: max rel ln-error=330.12%  max|H|=1.000000
+fir5 fs=48000 f0=110: max rel ln-error=90.23%  max|H|=0.978322
+fir5 fs=48000 f0=349.23: max rel ln-error=34.66%  max|H|=0.995633
+fir5 fs=48000 f0=880: max rel ln-error=5.69%  max|H|=0.999001
+fir5 fs=96000 f0=110: max rel ln-error=91.55%  max|H|=0.978135
+fir5 fs=96000 f0=349.23: max rel ln-error=77.77%  max|H|=0.993684
+fir5 fs=96000 f0=880: max rel ln-error=77.02%  max|H|=1.000000

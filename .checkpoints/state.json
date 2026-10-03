@@ -7,8 +7,8 @@
   "mode_flags": {
     "software.deploys": false
   },
-  "phase": "3",
-  "subphase": "3.1",
+  "phase": "4",
+  "subphase": "4.1",
   "research_round": 5,
   "exploration_round": 0,
   "proof_review_round": 0,
@@ -30,11 +30,15 @@
     "2B.3-tests",
     "2B.5-red",
     "2E.1-traceability",
-    "2E.2-freeze"
+    "2E.2-freeze",
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "3.5",
+    "3.6-cold-read(2 passes)"
   ],
   "pending": [
-    "3.1-3.5",
-    "3.6-cold-read",
     "4",
     "5"
   ],
@@ -49,18 +53,16 @@
     "G-001"
   ],
   "artifacts": {
-    "plan/PROFILE.md": "a21b77301d15bc4b0486bffe362572e88455f9342b09ea54010e909864471cf0",
-    "plan/ASSUMPTIONS.md": "a7ecd2a58dfbd650a630289fd619d37666c770047abda170333fc46e215caad8",
-    "plan/DECISIONS.md": "a2f5ee9f29ba43f6acb789b15e18e9e831970a103e023fc7462fda3b46c0dda0",
-    "plan/ENVIRONMENT.md": "245e9aa64ff66c031485327ad72338bc1b431ec7ecc5dbbddddf350a7e5dbf8e",
-    "plan/deps.lock.json": "bbd81eb965fa463e0843eeb84f4e83e3f893fee967740731a414f8fa4ee5f634",
-    "plan/INSTRUMENT_DATA.md": "0b28a9403697045052881f44806d4f0b1c304ab48f5595e2bbc39369adac37d3",
-    "plan/TRACEABILITY.md": "541e380a74aff8ffb112751b19841e8282f08747b255dddae50f41498c547516",
-    "research/claims.json": "aa33097e50603ff1ced8587db1b21908ad70c4308ef6108d3e839533cbcd7f22",
-    "tests/FROZEN_MANIFEST.sha256": "1fd53397d795c7c38e2cebbc865db05fbf746d30c1db71f02e2fcddcc8dcf15f",
-    "tests/RED_REPORT.md": "db6b74ec79efff1d93cd586a3e56ca7a955147ec9eedb6416d4286f34e6691c4",
-    "tests/TESTS.md": "e8d867eba9a24f0d97745359d5be8581015bc5d7fa814c081835e076ae90fe7b",
-    "premortem/RISK_REGISTER.md": "933e71eadaec9fed81344440f8c51d18e2080018331d8f621fae5e8fd300effc"
+    "HANDOFF.md": "92924202186215354e18deff4e2557d4b886e252bc4b52cd173e1cf5b211a7ee",
+    "plan/PLAN.md": "865cf7d3f6bc19799efdb28c1ddd157d44d4ab92d5df8f9aecc5b94f631de166",
+    "plan/GATES.md": "bd7d24564b8ede608f941bdc004fcfd3ee2ef98bebd8baa45b1231c840bd9150",
+    "plan/DECISIONS.md": "c281be78bb4d9f86feb5c894bdb03cc60756950e217f02cced44ea81ed28f418",
+    "plan/INSTRUMENT_DATA.md": "947d2f17975ef3def86efe91c0235fe742f7f87fad2e51defb0488c81032d88e",
+    "plan/TRACEABILITY.md": "6e9fbc70702e4a4fef5cf5d28c82b0aa17e0803b1a82b15c36239c6617cfad5c",
+    "plan/COLD_READ.md": "74dd14233aab86e0a16f39d1fa61fd03e09af8241db47745a08c3d4bba7a81da",
+    "plan/ASSUMPTIONS.md": "531c7c3415f229627605789b096323f72048366c4fb594fe5480ab6cca75d980",
+    "research/claims.json": "85a43402e0bf2a1f6cfb888231273b11b3e8de75ee76c4fc50765e2cb36ffcea",
+    "tests/FROZEN_MANIFEST.sha256": "1fd53397d795c7c38e2cebbc865db05fbf746d30c1db71f02e2fcddcc8dcf15f"
   },
   "environment": {
     "subagents": false,
@@ -100,7 +102,7 @@
   "open_items": [
     "R-001..R-004 carried to Phase 4"
   ],
-  "updated_at": "2026-10-03T16:13:47Z",
+  "updated_at": "2026-10-03T16:24:15Z",
   "red_verification": {
     "total": 42,
     "failed": 38,

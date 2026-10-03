@@ -34,11 +34,11 @@ The human replied "Defaults"; every proposed default is therefore adopted as sta
 | A-008 | UI | Instrument illustration highlighting string and stopping position/bridge-side position per played note, with parameter panels. | Mirrors saxophone-vst / clarinet-vst. |
 | A-009 | Tuning | Standard per-instrument tunings and string layouts; Scala .scl/.kbm import in scope. | Scala parser is attack surface (A-013). |
 | A-010 | Polyphony | Realistic per instrument (bowed mono+legato; plucked ≤ string count; zithers/yangqin polyphonic) with a "free polyphony" override. | |
-| A-011 | Realism criteria | Objective tests vs. published measurements (pitch ±3 cents; inharmonicity, body resonances, decay times within cited tolerances) plus human listening gate G-003 per family before UI polish. No copyrighted recordings committed. | |
+| A-011 | Realism criteria | Objective tests vs. published measurements (pitch ±3 cents; inharmonicity, body resonances, decay times within cited tolerances) plus human listening gates G-003a..d (one per family) before UI polish. No copyrighted recordings committed. | |
 | A-012 | Performance | 16 voices of heaviest instrument @48 kHz/128-sample buffer < 25 % of one core on 2020-era x64 laptop reference; zero added latency; no allocation/locks on audio thread. | CI enforces a normalised benchmark (see D-### later). |
 | A-013 | Threat model | Offline; no network, no telemetry. Attack surface = preset/state/Scala parsing → validation + fuzz tests. | |
 | A-014 | Release | Plan ends with CI artifacts. Any GitHub Release/tag gated by G-002. | |
 | A-015 | Repo bootstrap | Minimal `main` (LICENSE, README stub) pushed; all plan artifacts on the generation branch. | Done: main @ initial commit. |
 | A-016 | Execution environment | Planning runs in claude.ai chat with a single model (Opus 5.5); no subagents. All tiered and fresh-context roles are executed sequentially by the same model and logged as tier substitutions. | Reduced independence of adversarial review, cold-read and pre-mortem; mitigated by explicit role separation and written checklists. |
-| A-017 | Human test setup | Windows 11 + Reaper for human listening gates. | G-003 evidence bundles are rendered WAVs + Reaper project. |
+| A-017 | Human test setup | Windows 11 + Reaper for human listening gates. | G-003a..d evidence bundles are rendered WAVs; the Reaper check happens at G-004 (plan clarification, Phase 3). |
 | A-018 | AI disclosure | Not applicable (no publication); README states the plan was AI-generated. | |

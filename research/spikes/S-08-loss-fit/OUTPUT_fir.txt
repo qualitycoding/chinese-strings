@@ -1,0 +1,30 @@
+fs= 22050 f0=  30.00: M=38 taps=77 max rel ln-error=2.72% max|H|<=1:True
+fs= 22050 f0= 110.00: M= 6 taps=13 max rel ln-error=0.94% max|H|<=1:True
+fs= 22050 f0= 349.23: M= 3 taps= 7 max rel ln-error=2.16% max|H|<=1:True
+fs= 22050 f0= 880.00: M= 4 taps= 9 max rel ln-error=1.99% max|H|<=1:True
+fs= 22050 f0=2093.00: M= 2 taps= 5 max rel ln-error=2.63% max|H|<=1:True
+fs= 22050 f0=4186.00: M= 1 taps= 3 max rel ln-error=0.00% max|H|<=1:True
+fs= 44100 f0=  30.00: M=40 taps=81 max rel ln-error=33.14% max|H|<=1:True
+fs= 44100 f0= 110.00: M=11 taps=23 max rel ln-error=1.92% max|H|<=1:True
+fs= 44100 f0= 349.23: M= 2 taps= 5 max rel ln-error=0.65% max|H|<=1:True
+fs= 44100 f0= 880.00: M= 3 taps= 7 max rel ln-error=2.46% max|H|<=1:True
+fs= 44100 f0=2093.00: M= 3 taps= 7 max rel ln-error=2.47% max|H|<=1:True
+fs= 44100 f0=4186.00: M= 2 taps= 5 max rel ln-error=2.63% max|H|<=1:True
+fs= 48000 f0=  30.00: M=40 taps=81 max rel ln-error=42.57% max|H|<=1:True
+fs= 48000 f0= 110.00: M=12 taps=25 max rel ln-error=1.88% max|H|<=1:True
+fs= 48000 f0= 349.23: M= 2 taps= 5 max rel ln-error=0.96% max|H|<=1:True
+fs= 48000 f0= 880.00: M= 3 taps= 7 max rel ln-error=2.43% max|H|<=1:True
+fs= 48000 f0=2093.00: M= 4 taps= 9 max rel ln-error=1.69% max|H|<=1:True
+fs= 48000 f0=4186.00: M= 3 taps= 7 max rel ln-error=2.43% max|H|<=1:True
+fs= 96000 f0=  30.00: M=40 taps=81 max rel ln-error=1006.51% max|H|<=1:True
+fs= 96000 f0= 110.00: M=23 taps=47 max rel ln-error=2.31% max|H|<=1:True
+fs= 96000 f0= 349.23: M= 4 taps= 9 max rel ln-error=1.34% max|H|<=1:True
+fs= 96000 f0= 880.00: M= 2 taps= 5 max rel ln-error=2.57% max|H|<=1:True
+fs= 96000 f0=2093.00: M= 3 taps= 7 max rel ln-error=2.20% max|H|<=1:True
+fs= 96000 f0=4186.00: M= 4 taps= 9 max rel ln-error=1.65% max|H|<=1:True
+fs=192000 f0=  30.00: M=40 taps=81 max rel ln-error=4107.61% max|H|<=1:True
+fs=192000 f0= 110.00: M=40 taps=81 max rel ln-error=4.40% max|H|<=1:True
+fs=192000 f0= 349.23: M= 8 taps=17 max rel ln-error=1.38% max|H|<=1:True
+fs=192000 f0= 880.00: M= 2 taps= 5 max rel ln-error=0.74% max|H|<=1:True
+fs=192000 f0=2093.00: M= 3 taps= 7 max rel ln-error=0.90% max|H|<=1:True
+fs=192000 f0=4186.00: M= 3 taps= 7 max rel ln-error=2.04% max|H|<=1:True

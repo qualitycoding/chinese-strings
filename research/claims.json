@@ -2156,5 +2156,39 @@
    "D-019 yehu/banhu body",
    "plan/deps.lock.json"
   ]
+ },
+ {
+  "id": "C-068",
+  "claim": "A gain x one-pole (or first-order shelf, or two cascaded one-poles) loop-loss filter cannot meet T-010's 5 % ln|H| tolerance at f0=110 Hz (best 6.8-8.3 %); a zero-phase symmetric FIR of 2M+1 taps fitted by weighted linear least squares meets <= 3 % for every T-010 case (largest: 47 taps at 96 kHz / 110 Hz) with max|H| <= 1.",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-08-loss-fit/OUTPUT.txt",
+    "doi": "",
+    "title": "Spike S-08",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-08-loss-fit/OUTPUT_fir.txt",
+    "doi": "",
+    "title": "Spike S-08b",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "S-005 LossFilter design",
+   "T-010 feasibility",
+   "DR-03"
+  ]
  }
 ]
