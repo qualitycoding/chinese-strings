@@ -22,7 +22,18 @@ double thiranPhaseDelay(double a, double omega);
 double lineDelayFor(double target, double omega);
 // Complete design for a string of `spec` sounding at hz (effective length / stiffness scaled from the open string).
 // extraDelay = unit delays in the loop outside the line (1 for the feedback register).  Returns the nominal line delay in *lineDelay.
-void designString(double fs, const StringSpec& spec, double hz, int extraDelay, StringDesign& out, double* lineDelay, bool allowDispersion = true);
+void designString(double fs, const StringSpec& spec, double hz, int extraDelay, StringDesign& out, double* lineDelay, bool allowDispersion = true, double lossShare = 1.0);
+
+// Zero-phase symmetric FIR loss realised causally (delay M); used for the bridge segment of bowed strings.
+struct FirLoss {
+    LossDesign d; float hist[128] = {}; unsigned pos = 0;
+    float process(float x) noexcept {
+        hist[pos & 127u] = x; const int M = d.M; double acc = d.c[0] * (double) hist[(pos - (unsigned) M) & 127u];
+        for (int k = 1; k <= M; ++k) acc += d.c[k] * ((double) hist[(pos - (unsigned) M + (unsigned) k) & 127u] + (double) hist[(pos - (unsigned) M - (unsigned) k) & 127u]);
+        ++pos; return (float) acc;
+    }
+    void reset() noexcept { for (auto& h : hist) h = 0.0f; pos = 0; }
+};
 
 // Real-time loop: unit register -> fractional delay -> dispersion -> loss FIR (zero-phase, delayed by M).
 class StringLoop {

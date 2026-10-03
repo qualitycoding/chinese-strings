@@ -1,0 +1,116 @@
+{
+ "name": "Slurred phrase on the upper string: each note starts before the previous one is released (mono legato, 20 ms glide)",
+ "length": 7.5,
+ "events": [
+  {
+   "t": 0.0,
+   "type": "noteOn",
+   "note": "S1+0",
+   "vel": 100
+  },
+  {
+   "t": 0.6,
+   "type": "noteOn",
+   "note": "S1+2",
+   "vel": 100
+  },
+  {
+   "t": 0.63,
+   "type": "noteOff",
+   "note": "S1+0"
+  },
+  {
+   "t": 1.2,
+   "type": "noteOn",
+   "note": "S1+4",
+   "vel": 100
+  },
+  {
+   "t": 1.23,
+   "type": "noteOff",
+   "note": "S1+2"
+  },
+  {
+   "t": 1.7999999999999998,
+   "type": "noteOn",
+   "note": "S1+2",
+   "vel": 100
+  },
+  {
+   "t": 1.8299999999999998,
+   "type": "noteOff",
+   "note": "S1+4"
+  },
+  {
+   "t": 2.4,
+   "type": "noteOn",
+   "note": "S1+0",
+   "vel": 100
+  },
+  {
+   "t": 2.4299999999999997,
+   "type": "noteOff",
+   "note": "S1+2"
+  },
+  {
+   "t": 3.0,
+   "type": "noteOn",
+   "note": "S1+4",
+   "vel": 100
+  },
+  {
+   "t": 3.03,
+   "type": "noteOff",
+   "note": "S1+0"
+  },
+  {
+   "t": 3.5999999999999996,
+   "type": "noteOn",
+   "note": "S1+7",
+   "vel": 100
+  },
+  {
+   "t": 3.6299999999999994,
+   "type": "noteOff",
+   "note": "S1+4"
+  },
+  {
+   "t": 4.2,
+   "type": "noteOn",
+   "note": "S1+4",
+   "vel": 100
+  },
+  {
+   "t": 4.23,
+   "type": "noteOff",
+   "note": "S1+7"
+  },
+  {
+   "t": 4.8,
+   "type": "noteOn",
+   "note": "S1+2",
+   "vel": 100
+  },
+  {
+   "t": 4.83,
+   "type": "noteOff",
+   "note": "S1+4"
+  },
+  {
+   "t": 5.3999999999999995,
+   "type": "noteOn",
+   "note": "S1+0",
+   "vel": 100
+  },
+  {
+   "t": 5.43,
+   "type": "noteOff",
+   "note": "S1+2"
+  },
+  {
+   "t": 6.0,
+   "type": "noteOff",
+   "note": "S1+0"
+  }
+ ]
+}

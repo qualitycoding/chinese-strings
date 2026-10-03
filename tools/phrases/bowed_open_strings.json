@@ -1,0 +1,50 @@
+{
+ "name": "Open strings, each bowed for 1.4 s (strings the instrument lacks are skipped)",
+ "length": 8.7,
+ "events": [
+  {
+   "t": 0.0,
+   "type": "noteOn",
+   "note": "S0",
+   "vel": 100
+  },
+  {
+   "t": 1.4,
+   "type": "noteOff",
+   "note": "S0"
+  },
+  {
+   "t": 1.8,
+   "type": "noteOn",
+   "note": "S1",
+   "vel": 100
+  },
+  {
+   "t": 3.2,
+   "type": "noteOff",
+   "note": "S1"
+  },
+  {
+   "t": 3.6,
+   "type": "noteOn",
+   "note": "S2",
+   "vel": 100
+  },
+  {
+   "t": 5.0,
+   "type": "noteOff",
+   "note": "S2"
+  },
+  {
+   "t": 5.4,
+   "type": "noteOn",
+   "note": "S3",
+   "vel": 100
+  },
+  {
+   "t": 6.800000000000001,
+   "type": "noteOff",
+   "note": "S3"
+  }
+ ]
+}

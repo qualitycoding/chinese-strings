@@ -46,7 +46,7 @@ private: std::vector<float> buf_; std::size_t mask_ = 0; std::size_t w_ = 0; int
 struct FrictionParams { double muS = 0.8, muD = 0.3, v0 = 0.2; };
 struct BowJunction {
     // rho_hat in [0,1) for every finite input (C-062); bowForceN >= 0, waveImpedance > 0.
-    // Convention: outgoing waves = incoming wave from the opposite side + rho_hat * vDeltaPlus (so rho_hat <= 1/2; 1/2 = sticking).
+    // Convention: outgoing waves = incoming wave from the opposite side + rho_hat * vDeltaPlus; rho_hat -> 1 when the bow sticks.
     static double reflectionCoefficient(double vDeltaPlus, double bowForceN, double waveImpedance, const FrictionParams& p);
 };
 // Hunt-Crossley contact (DAFx26 eq. 4-5): f = K [x]+^alpha * (1 + beta * dx/dt); 0 when x <= 0.

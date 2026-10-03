@@ -7,8 +7,9 @@
 #include <vector>
 namespace cs::detail {
 struct NoteDesign {
-    int stringIdx = 0; double stop = 0, hz12 = 0, designHz = 0;
-    StringDesign d; double lineDelay = 1.0; int Db = 0;     // Db: bridge-side loop delay (bowed voices)
+    int stringIdx = 0; double stop = 0, hz12 = 0, designHz = 0, lockFactor = 1.0;
+    StringDesign d; double lineDelay = 1.0; int Db = 0;     // Db: total bridge-side loop delay incl. register and FIR (bowed voices)
+    LossDesign bridgeLoss; int dbLine = 1;                  // bridge segment loss FIR and its integer delay (bowed voices)
 };
 struct Designs {
     int midiLow = 0; std::vector<NoteDesign> notes;
@@ -36,4 +37,5 @@ public:
 };
 std::unique_ptr<Voice> makeVoice(Family f);
 std::unique_ptr<Voice> makePluckedVoice();
+std::unique_ptr<Voice> makeBowedVoice();
 }

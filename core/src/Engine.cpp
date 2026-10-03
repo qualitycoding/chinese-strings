@@ -13,13 +13,15 @@ namespace {
 constexpr double kPi = 3.14159265358979323846;
 constexpr int kQueue = 512, kCtrlBlock = 32;
 constexpr double kBodyMix = 0.35;                     // body-mode colouring added to the dry bridge signal (DD)
+constexpr double kRadiationWet = 0.6;                 // yehu/banhu: share of the measured radiation response in the output; the rest is the dry body signal (DD; S-008)
+constexpr double kRadiationTrim = 0.8;                // level trim for radiated instruments (DD; S-008: keeps yehu/banhu peaks <= -3 dBFS)
 struct Event { int sample; std::uint8_t status, d1, d2; };
 
 // Parallel second-order radiation sections (S-07), re-derived for the engine sample rate by impulse invariance.
 struct Radiation {
     struct Sec { double b0, b1, a1, a2, z1 = 0, z2 = 0; };
     bool on = false; double fir = 0, norm = 1; std::vector<Sec> secs;
-    void configure(const RadiationSpec* rs, double fs) {
+    void configure(const RadiationSpec* rs, double fs, double loHz) {
         secs.clear(); on = rs != nullptr; if (!on) return;
         const double k = rs->designSampleRate / fs; fir = rs->fir;
         for (const auto& s : rs->sections) {
@@ -29,14 +31,14 @@ struct Radiation {
             const C q1 = std::exp(k * std::log(p1)), q2 = std::exp(k * std::log(p2)); const C g1 = k * r1, g2 = k * r2;
             Sec o; o.a1 = (-(q1 + q2)).real(); o.a2 = (q1 * q2).real(); o.b0 = (g1 + g2).real(); o.b1 = (-(g1 * q2 + g2 * q1)).real(); secs.push_back(o);
         }
-        double mx = 1e-12;                                  // normalise the peak of 100 Hz .. 8 kHz to unity
-        for (int i = 0; i < 200; ++i) {
-            const double f = 100.0 * std::pow(80.0, i / 199.0); if (f > 0.45 * fs) break;
+        double acc = 0; int cnt = 0;                         // normalise the mean power over the instrument's playing range .. 6 kHz (log grid) to unity: the measured yehu response
+        for (int i = 0; i < 200; ++i) {                      // spans ~47 dB, so a peak-based norm would leave ordinary notes ~35 dB down (S-008 finding)
+            const double f = loHz * std::pow(6000.0 / loHz, i / 199.0); if (f > 0.45 * fs) break;
             const std::complex<double> z1 = std::polar(1.0, -2.0 * kPi * f / fs), z2 = z1 * z1; std::complex<double> h = fir;
             for (const auto& s : secs) h += (s.b0 + s.b1 * z1) / (1.0 + s.a1 * z1 + s.a2 * z2);
-            mx = std::max(mx, std::abs(h));
+            acc += std::norm(h); ++cnt;
         }
-        norm = 1.0 / mx;
+        norm = cnt > 0 && acc > 1e-18 ? 1.0 / std::sqrt(acc / cnt) : 1.0;
     }
     float process(float x) noexcept {
         double y = fir * (double) x;
@@ -61,7 +63,7 @@ struct Engine::Impl {
         designs = designsFor(inst, fs); voices.clear();
         const int nv = std::max(kFreePolyphonyVoices, sp->maxPolyphony);
         for (int i = 0; i < nv; ++i) { auto v = makeVoice(sp->family); v->prepare(fs, *sp, designs); voices.push_back(std::move(v)); }
-        body.configure(fs, sp->bodyModes); rad.configure(radiationFor(inst), fs);
+        body.configure(fs, sp->bodyModes); rad.configure(radiationFor(inst), fs, 440.0 * std::pow(2.0, (sp->midiLow - 69) / 12.0));
         mono.assign((std::size_t) std::max(maxBlock, kCtrlBlock) + 8, 0.0f); qn = 0; tech = Technique::Default; lfoPhase = 0;
         std::memset(bend, 0, sizeof(bend)); std::memset(chanPress, 0, sizeof(chanPress)); cc1 = 1.0f; gainNow = params[(int) ParamId::Gain];
     }
@@ -90,7 +92,11 @@ struct Engine::Impl {
     void noteOn(int ch, int note, int vel) noexcept {
         if (note >= kKeyswitchLow && note < kKeyswitchLow + kNumTechniques) { const auto t = static_cast<Technique>(note - kKeyswitchLow); tech = supportsTechnique(inst, t) ? t : Technique::Default; return; }
         if (note < sp->midiLow || note > sp->midiHigh) return;
-        syncParams(); const int idx = allocate(std::max(1, voiceLimit())); Voice& v = *voices[(std::size_t) idx];
+        syncParams();
+        if (voiceLimit() == 1 && !voices.empty() && voices[0]->supportsLegato() && voices[0]->active && !voices[0]->releasing) {   // mono legato (D-022)
+            Voice& v = *voices[0]; v.note = note; v.channel = ch; v.age = ++ageCtr; v.legato(note, targetHz(v), (float) vel / 127.0f, vp); return;
+        }
+        const int idx = allocate(std::max(1, voiceLimit())); Voice& v = *voices[(std::size_t) idx];
         v.reset(); v.note = note; v.channel = ch; v.age = ++ageCtr; v.active = true; v.releasing = false;
         v.noteOn(note, targetHz(v), (float) vel / 127.0f, vp); v.active = true;
     }
@@ -115,7 +121,7 @@ struct Engine::Impl {
         for (auto& v : voices) if (v->active) v->render(m, len, vp);
         const double gt = params[(int) ParamId::Gain], gc = 1.0 - std::exp(-1.0 / (0.01 * fs)); bool bad = false;
         for (int i = 0; i < len; ++i) {
-            float x = m[i]; float y = x + (float) kBodyMix * body.process(x); if (rad.on) y = rad.process(y);
+            float x = m[i]; float y = x + (float) kBodyMix * body.process(x); if (rad.on) y = (float) (kRadiationTrim * ((1.0 - kRadiationWet) * (double) y + kRadiationWet * (double) rad.process(y)));
             gainNow += (gt - gainNow) * gc; float o = (float) (gainNow * y);
             if (!std::isfinite(o)) { bad = true; o = 0.0f; }
             const float a = std::fabs(o); if (a > 2.0f) o = std::copysign(2.0f + std::tanh(a - 2.0f), o);

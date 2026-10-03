@@ -126,13 +126,13 @@ void designDispersion(double fs, double f0, double B, int order, DispDesign& out
     for (int k = 0; k < K; ++k) { out.a1[k] = -2.0 * bestP[2 * k] * std::cos(bestP[2 * k + 1]); out.a2[k] = bestP[2 * k] * bestP[2 * k]; }
 }
 
-void designString(double fs, const StringSpec& spec, double hz, int extraDelay, StringDesign& out, double* lineDelay, bool allowDisp) {
+void designString(double fs, const StringSpec& spec, double hz, int extraDelay, StringDesign& out, double* lineDelay, bool allowDisp, double lossShare) {
     out = StringDesign{}; out.hz = hz;
     const double P = fs / hz, w1 = 2.0 * kPi * hz / fs, ratio = hz / spec.openHz;
     const double Leff = spec.vibratingLengthM / ratio, Beff = inharmonicityB(spec) * ratio * ratio;
     const double avail = P - extraDelay - 2.0;                  // samples left for line (>= 1.5) + filters
     int Mmax = (int) std::min<double>(kMaxFirM, std::floor(0.25 * P)); Mmax = std::max(0, std::min(Mmax, (int) std::floor(0.5 * avail)));
-    designLoss(fs, hz, spec.sigma0, spec.sigma1, Leff, Mmax, 0.03, out.loss);
+    designLoss(fs, hz, spec.sigma0 * lossShare, spec.sigma1 * lossShare, Leff, Mmax, 0.03, out.loss);
     if (allowDisp) {
         designDispersion(fs, hz, Beff, 4, out.disp); out.dispDelay = dispersionPhaseDelay(out.disp, w1);
         if (out.dispDelay + out.loss.M > 0.8 * avail) { out.disp = DispDesign{}; out.dispDelay = 0; }

@@ -1,4 +1,4 @@
 build*/
 red.log
-renders/*.wav
+renders/**/*.wav
 .DS_Store

@@ -1,0 +1,35 @@
+{
+ "name": "One long note: no vibrato, then 20 cents, 45 cents (5.5 Hz), then straight again",
+ "length": 6.5,
+ "events": [
+  {
+   "t": 0.0,
+   "type": "noteOn",
+   "note": "S1+2",
+   "vel": 100
+  },
+  {
+   "t": 1.2,
+   "type": "param",
+   "name": "vibratoDepth",
+   "value": 20
+  },
+  {
+   "t": 2.6,
+   "type": "param",
+   "name": "vibratoDepth",
+   "value": 45
+  },
+  {
+   "t": 4.0,
+   "type": "param",
+   "name": "vibratoDepth",
+   "value": 0
+  },
+  {
+   "t": 5.2,
+   "type": "noteOff",
+   "note": "S1+2"
+  }
+ ]
+}

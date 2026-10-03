@@ -1,0 +1,325 @@
+{
+ "name": "Major scale from the lowest open string, two octaves up and back, detached",
+ "length": 16.0,
+ "events": [
+  {
+   "t": 0.0,
+   "type": "noteOn",
+   "note": "S0+0",
+   "vel": 100
+  },
+  {
+   "t": 0.44,
+   "type": "noteOff",
+   "note": "S0+0"
+  },
+  {
+   "t": 0.5,
+   "type": "noteOn",
+   "note": "S0+2",
+   "vel": 100
+  },
+  {
+   "t": 0.94,
+   "type": "noteOff",
+   "note": "S0+2"
+  },
+  {
+   "t": 1.0,
+   "type": "noteOn",
+   "note": "S0+4",
+   "vel": 100
+  },
+  {
+   "t": 1.44,
+   "type": "noteOff",
+   "note": "S0+4"
+  },
+  {
+   "t": 1.5,
+   "type": "noteOn",
+   "note": "S0+5",
+   "vel": 100
+  },
+  {
+   "t": 1.94,
+   "type": "noteOff",
+   "note": "S0+5"
+  },
+  {
+   "t": 2.0,
+   "type": "noteOn",
+   "note": "S0+7",
+   "vel": 100
+  },
+  {
+   "t": 2.44,
+   "type": "noteOff",
+   "note": "S0+7"
+  },
+  {
+   "t": 2.5,
+   "type": "noteOn",
+   "note": "S0+9",
+   "vel": 100
+  },
+  {
+   "t": 2.94,
+   "type": "noteOff",
+   "note": "S0+9"
+  },
+  {
+   "t": 3.0,
+   "type": "noteOn",
+   "note": "S0+11",
+   "vel": 100
+  },
+  {
+   "t": 3.44,
+   "type": "noteOff",
+   "note": "S0+11"
+  },
+  {
+   "t": 3.5,
+   "type": "noteOn",
+   "note": "S0+12",
+   "vel": 100
+  },
+  {
+   "t": 3.94,
+   "type": "noteOff",
+   "note": "S0+12"
+  },
+  {
+   "t": 4.0,
+   "type": "noteOn",
+   "note": "S0+14",
+   "vel": 100
+  },
+  {
+   "t": 4.44,
+   "type": "noteOff",
+   "note": "S0+14"
+  },
+  {
+   "t": 4.5,
+   "type": "noteOn",
+   "note": "S0+16",
+   "vel": 100
+  },
+  {
+   "t": 4.94,
+   "type": "noteOff",
+   "note": "S0+16"
+  },
+  {
+   "t": 5.0,
+   "type": "noteOn",
+   "note": "S0+17",
+   "vel": 100
+  },
+  {
+   "t": 5.44,
+   "type": "noteOff",
+   "note": "S0+17"
+  },
+  {
+   "t": 5.5,
+   "type": "noteOn",
+   "note": "S0+19",
+   "vel": 100
+  },
+  {
+   "t": 5.94,
+   "type": "noteOff",
+   "note": "S0+19"
+  },
+  {
+   "t": 6.0,
+   "type": "noteOn",
+   "note": "S0+21",
+   "vel": 100
+  },
+  {
+   "t": 6.44,
+   "type": "noteOff",
+   "note": "S0+21"
+  },
+  {
+   "t": 6.5,
+   "type": "noteOn",
+   "note": "S0+23",
+   "vel": 100
+  },
+  {
+   "t": 6.94,
+   "type": "noteOff",
+   "note": "S0+23"
+  },
+  {
+   "t": 7.0,
+   "type": "noteOn",
+   "note": "S0+24",
+   "vel": 100
+  },
+  {
+   "t": 7.44,
+   "type": "noteOff",
+   "note": "S0+24"
+  },
+  {
+   "t": 7.5,
+   "type": "noteOn",
+   "note": "S0+23",
+   "vel": 100
+  },
+  {
+   "t": 7.94,
+   "type": "noteOff",
+   "note": "S0+23"
+  },
+  {
+   "t": 8.0,
+   "type": "noteOn",
+   "note": "S0+21",
+   "vel": 100
+  },
+  {
+   "t": 8.44,
+   "type": "noteOff",
+   "note": "S0+21"
+  },
+  {
+   "t": 8.5,
+   "type": "noteOn",
+   "note": "S0+19",
+   "vel": 100
+  },
+  {
+   "t": 8.94,
+   "type": "noteOff",
+   "note": "S0+19"
+  },
+  {
+   "t": 9.0,
+   "type": "noteOn",
+   "note": "S0+17",
+   "vel": 100
+  },
+  {
+   "t": 9.44,
+   "type": "noteOff",
+   "note": "S0+17"
+  },
+  {
+   "t": 9.5,
+   "type": "noteOn",
+   "note": "S0+16",
+   "vel": 100
+  },
+  {
+   "t": 9.94,
+   "type": "noteOff",
+   "note": "S0+16"
+  },
+  {
+   "t": 10.0,
+   "type": "noteOn",
+   "note": "S0+14",
+   "vel": 100
+  },
+  {
+   "t": 10.44,
+   "type": "noteOff",
+   "note": "S0+14"
+  },
+  {
+   "t": 10.5,
+   "type": "noteOn",
+   "note": "S0+12",
+   "vel": 100
+  },
+  {
+   "t": 10.94,
+   "type": "noteOff",
+   "note": "S0+12"
+  },
+  {
+   "t": 11.0,
+   "type": "noteOn",
+   "note": "S0+11",
+   "vel": 100
+  },
+  {
+   "t": 11.44,
+   "type": "noteOff",
+   "note": "S0+11"
+  },
+  {
+   "t": 11.5,
+   "type": "noteOn",
+   "note": "S0+9",
+   "vel": 100
+  },
+  {
+   "t": 11.94,
+   "type": "noteOff",
+   "note": "S0+9"
+  },
+  {
+   "t": 12.0,
+   "type": "noteOn",
+   "note": "S0+7",
+   "vel": 100
+  },
+  {
+   "t": 12.44,
+   "type": "noteOff",
+   "note": "S0+7"
+  },
+  {
+   "t": 12.5,
+   "type": "noteOn",
+   "note": "S0+5",
+   "vel": 100
+  },
+  {
+   "t": 12.94,
+   "type": "noteOff",
+   "note": "S0+5"
+  },
+  {
+   "t": 13.0,
+   "type": "noteOn",
+   "note": "S0+4",
+   "vel": 100
+  },
+  {
+   "t": 13.44,
+   "type": "noteOff",
+   "note": "S0+4"
+  },
+  {
+   "t": 13.5,
+   "type": "noteOn",
+   "note": "S0+2",
+   "vel": 100
+  },
+  {
+   "t": 13.94,
+   "type": "noteOff",
+   "note": "S0+2"
+  },
+  {
+   "t": 14.0,
+   "type": "noteOn",
+   "note": "S0+0",
+   "vel": 100
+  },
+  {
+   "t": 14.44,
+   "type": "noteOff",
+   "note": "S0+0"
+  }
+ ]
+}
