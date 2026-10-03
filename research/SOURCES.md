@@ -42,12 +42,15 @@ Generated from research/claims.json.
 | 1 | Spike S-04 |  |  | research/spikes/S-04-scala-fuzz/OUTPUT.md | 2026-10-03 | C-053 | read in full (local) |
 | 1 | Spike S-05 |  |  | research/spikes/S-05-perf-rtsafety/OUTPUT.md | 2026-10-03 | C-054, C-055 | read in full (local) |
 | 1 | Spike S-06 |  |  | research/spikes/S-06-decay-oracle/OUTPUT.json | 2026-10-03 | C-063 | read in full (local) |
+| 1 | Spike S-07 |  |  | research/spikes/S-07-yehu-body/OUTPUT.txt | 2026-10-03 | C-067 | read in full (local) |
+| 1 | Spike S-08 |  |  | research/spikes/S-08-loss-fit/OUTPUT.txt | 2026-10-03 | C-068 | read in full (local) |
+| 1 | Spike S-08b |  |  | research/spikes/S-08-loss-fit/OUTPUT_fir.txt | 2026-10-03 | C-068 | read in full (local) |
 | 1 | Sympathetic string modes in the concert harp | abstract; Acta Acust. 95(4) 744-752 |  | https://researchportal.ip-paris.fr/en/publications/sympathetic-string-modes-in-the-concert-harp/ | 2026-10-03 | C-065 | abstract/snippet only |
 | 1 | Tsai, Vibrations of a yangqin soundboard (MS thesis, NIU 1991) | abstract |  | https://huskiecommons.lib.niu.edu/allgraduate-thesesdissertations/6648 | 2026-10-03 | C-016 | abstract/snippet only |
 | 1 | Vibration analysis of a bowed string involving dynamics of a soundbox and neck ... Erhu | full text read, §3-4, Tables 1-2, Figs 11,16 | 10.1250/ast.44.281 | https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf | 2026-10-03 | C-009, C-027, C-032, C-033, C-039, C-048 | full text read |
 | 1 | Vibration mode of Guzheng soundboard with composite structure | abstract | 10.12171/j.1000-1522.20210495 | https://j.bjfu.edu.cn/en/article/doi/10.12171/j.1000-1522.20210495 | 2026-10-03 | C-013 | abstract/snippet only |
 | 1 | Waltham et al., harp soundboard (Canadian Acoustics 2008) | references: JASA 124, 1774-1780 |  | https://jcaa.caa-aca.ca/index.php/jcaa/article/download/2108/1855/2245 | 2026-10-03 | C-065 | abstract/snippet only |
-| 1 | Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0) | full text read: §2-5, Table 1, §5.4 |  | https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf | 2026-10-03 | C-010, C-027, C-028, C-034, C-035, C-048, C-063 | full text read |
+| 1 | Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0) | full text read: §2-5, Table 1, §5.4 |  | https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf | 2026-10-03 | C-010, C-027, C-028, C-034, C-035, C-048, C-063, C-067 | full text read |
 | 1 | actions/runner-images README | Available Images |  | https://github.com/actions/runner-images | 2026-10-03 | C-051 | abstract/snippet only |
 | 1 | git ls-remote | refs/tags/v3.16.0^{} |  | https://github.com/catchorg/Catch2.git | 2026-10-03 | C-060 | API/raw/tag file read |
 | 1 | git ls-remote --tags | refs/tags/9.0.3 |  | https://github.com/juce-framework/JUCE.git | 2026-10-03 | C-001, C-060 | API/raw/tag file read |
@@ -58,6 +61,7 @@ Generated from research/claims.json.
 | 1 | pluginval releases | v1.0.4 |  | https://api.github.com/repos/Tracktion/pluginval/releases | 2026-10-03 | C-006 | API/raw/tag file read |
 | 1 | tuning-library repo metadata | license=MIT; commits API |  | https://api.github.com/repos/surge-synthesizer/tuning-library | 2026-10-03 | C-043 | API/raw/tag file read |
 | 1 | vst3sdk licence (GitHub API) | spdx_id=MIT |  | https://api.github.com/repos/steinbergmedia/vst3sdk/license | 2026-10-03 | C-005 | API/raw/tag file read |
+| 1 | yehuParams.m | STRING/BODY PARAMETERS |  | https://github.com/yehudafx26/yehudafx26/blob/284e5be25eaf55fdd366b8d9f3917a10da8ee6a4/examples/yehuParams.m | 2026-10-03 | C-067 | API/raw/tag file read |
 | 1 | yehudafx26 repo metadata | license=MIT |  | https://api.github.com/repos/yehudafx26/yehudafx26 | 2026-10-03 | C-036 | API/raw/tag file read |
 | 2 | ASA 127th meeting 5pMU4 | abstract |  | https://auditory.org/asamtgs/asa94mit/5pMU/5pMU4.html | 2026-10-03 | C-016 | abstract/snippet only |
 | 2 | Ableton ASCL spec (SCL superset) | header comments |  | https://help.ableton.com/hc/articles/10998372840220-ASCL-Specification | 2026-10-03 | C-042 | abstract/snippet only |

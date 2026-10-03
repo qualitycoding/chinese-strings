@@ -21,7 +21,7 @@ cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release && cmake --build build -
 ctest --test-dir build --output-on-failure            # all labels
 ctest --test-dir build -L perf --output-on-failure     # T-080 (Release only)
 ```
-At hand-off the expected result is the red state in tests/RED_REPORT.md (38 of 42 fail with cs::NotImplemented / missing NOTICE).
+At hand-off the expected result is the red state in tests/RED_REPORT.md (41 of 45 fail with cs::NotImplemented / missing NOTICE).
 
 ## Verify the freeze
 `sha256sum -c tests/FROZEN_MANIFEST.sha256` (macOS: `shasum -a 256 -c tests/FROZEN_MANIFEST.sha256`). Every line must be `OK`. Run before every commit; CI also runs it.

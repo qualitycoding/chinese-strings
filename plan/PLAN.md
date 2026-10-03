@@ -1,6 +1,11 @@
 # Execution plan — chinese-strings
 
-(Status header is written in Phase 5.)
+> **STATUS: READY** — generated 2026-10-03 by the planning agent (protocol v3.1).
+> **Profiles:** `software` (`software.deploys = false`).
+> **Claims (68):** verified 24 · corroborated 30 · single-source 13 · inferred 1 (no single-source/inferred claim is asserted by a frozen test; residuals carried as R-001..R-004).
+> **Frozen tests (46 IDs):** unit 15 · integration 14 · acoustic 4 · operational 2 · security 5 · performance 2 · real-time safety 1 · conformance 3 (+ 4 infrastructure self-tests SUPPORT-1..4). Red-verified: 41/45 CTest tests fail with NotImplemented/missing NOTICE; non-CTest checks fail cleanly (see tests/RED_REPORT.md).
+> **Steps:** 17 (S-001..S-017). **Human gates:** 6 (G-003a, G-003b, G-003c, G-003d, G-004, G-002).
+> **Risks:** Critical 1 (R-005, mitigated) · High 2 (R-006, R-007, mitigated) · Medium 8 (R-001..R-004, R-008..R-011; mitigated or accepted) · Low 1 (R-012, accepted). Pre-mortem converged after 2 rounds (0 open Critical/High).
 
 ## Conventions used by every step
 - **Repo root** = a clone of `https://github.com/qualitycoding/chinese-strings`. **Implementation branch** `impl/v0`, created in S-001 from the head of the generation branch named in HANDOFF.md. All implementer commits go to `impl/v0`; nothing is pushed to `main`.
@@ -27,7 +32,7 @@
   5. `mkdir -p .impl` and write `.impl/state.json` for S-001; commit `S-001: bootstrap`; `git push -u origin impl/v0`.
 - Outputs: branch `impl/v0`; `.impl/state.json`
 - Evidence produced: none
-- Done when: manifest check prints 23 `OK` lines; `red.log` shows `38 tests failed out of 42`; the 4 SUPPORT-* tests pass.
+- Done when: manifest check prints 25 `OK` lines; `red.log` shows `41 tests failed out of 45`; the 4 SUPPORT-* tests pass.
 - Checkpoint: `.impl/state.json` step S-001 done
 - On failure: setup command fails → DR-01; manifest mismatch → halt, write BLOCKED.md (frozen files altered); red counts differ → halt, BLOCKED.md with red.log attached.
 - Gate: none
@@ -127,7 +132,7 @@
 - Tier: Opus
 - Profile: software
 - Depends on: S-005, S-006
-- Inputs: Engine.h, Fingering.h, D-009, D-015, D-020, D-021, D-022
+- Inputs: Engine.h, EngineHost.h, Fingering.h, D-009, D-015, D-020, D-021, D-022, D-024
 - Actions:
   1. `core/src/Engine.cpp` (pimpl): `prepare` validates per Engine.h (throws std::invalid_argument), pre-allocates `kFreePolyphonyVoices` voices sized for the lowest instrument string at that fs, resets all voices; `setInstrument` resets voices and reconfigures strings/body/radiation (radiation converted per INSTRUMENT_DATA.md rule 5); render before prepare writes zeros.
   2. MIDI: note on/off (velocity 0 = off), pitch bend (D-020 normalisation), CC1 value v scales VibratoDepth by v/127 (v defaults to 127 until the first CC1 is received; reset to 127 by prepare), CC11 = expression (bow pressure / velocity scaling), channel pressure → bow pressure (bowed) or brightness (others); sample-accurate event scheduling inside `render` via a fixed-size event queue (capacity 512, overflow drops oldest).
@@ -135,10 +140,11 @@
   4. Note-off damping per D-022; parameters with 10 ms smoothing; `paramRange`/`paramKey` per Engine.h table; `fingeringFor` per D-021.
   5. Output: body modal bank → radiation (if any) → gain; stereo = identical L/R in v0.
   5a. Until S-008/S-010/S-011/S-012 replace them, every family uses a **placeholder voice**: `WaveguideString` + `pluck(PluckPosition)` with the instrument's string data and body (sustained families simply ring). The placeholder is deleted family by family as real voices land.
-  6. Remove remaining engine stubs.
-- Outputs: core/src/Engine.cpp, core/src/Fingering.cpp; Stubs.cpp
-- Evidence produced: T-005, T-030, T-031, T-032, T-033, T-034, T-041, T-042, T-043, T-070
-- Done when: `ctest -R "^T-005|^T-03[0-4]|^T-04[1-3]|^T-070"` pass for all 19 instruments with placeholder voices.
+  6. `core/src/EngineHost.cpp` per D-024 (pre-allocate a retire queue of 64 engine pointers; if full, `requestInstrument` calls `collectGarbage` first). FTZ/DAZ helper `core/src/Denormals.h` per D-024, used by `Engine::render` and `EngineHost::render`.
+  7. Remove remaining engine stubs.
+- Outputs: core/src/Engine.cpp, core/src/EngineHost.cpp, core/src/Denormals.h, core/src/Fingering.cpp; Stubs.cpp
+- Evidence produced: T-005, T-030, T-031, T-032, T-033, T-034, T-041, T-042, T-043, T-044, T-070
+- Done when: `ctest -R "^T-005|^T-03[0-4]|^T-04[1-4]|^T-070"` pass for all 19 instruments with placeholder voices (T-045 is expected to fail for bowed instruments until S-008).
 - Checkpoint: S-007 done
 - On failure: T-070 allocations → move allocation to prepare/setInstrument; default retry then DR-02.
 - Gate: none
@@ -156,7 +162,7 @@
   4. Render the G-003a bundle to `renders/G-003a/`; write report.md.
 - Outputs: core/src/BowedVoice.cpp, tools/cs_render/*, tools/phrases/*.json, renders/G-003a/report.md
 - Evidence produced: T-030 and T-031 for bowed instruments
-- Done when: `ctest -R "^T-0([0-2]|3[0-4]|4[1-3])|^T-070"` passes (regression across all instruments, bowed now real); G-003a response received.
+- Done when: `ctest -R "^T-0([0-2]|3[0-4]|4[1-5])|^T-070"` passes (bowed now real: T-045 passes for all instruments); G-003a response received.
 - Checkpoint: S-008 done; record the G-003a response verbatim in `.impl/notes.md`
 - On failure: bowed pitch outside ±3 cents → adjust bow position/force DD values (DR-10) before touching algorithms; DR-02 after budget.
 - Gate: G-003a
@@ -250,11 +256,11 @@
 - Tier: Opus
 - Profile: software
 - Depends on: S-012, S-013
-- Inputs: D-005, D-013, D-015, D-020, D-021, A-008, research/spikes/S-02-vst3-pluginval (CMake reference)
+- Inputs: D-005, D-013, D-015, D-020, D-021, D-023, D-024, A-008, research/spikes/S-02-vst3-pluginval (CMake reference)
 - Actions:
   1. `plugin/` target via `juce_add_plugin(ChineseStrings COMPANY_NAME qualitycoding PLUGIN_MANUFACTURER_CODE Qcod PLUGIN_CODE Cs01 FORMATS VST3 AU Standalone IS_SYNTH TRUE NEEDS_MIDI_INPUT TRUE PRODUCT_NAME "Chinese Strings")` (AU only on Apple).
-  2. Processor: AudioProcessorValueTreeState with one parameter per ParamId (ranges from `paramRange`) + `instrument` choice (19) + `mpe` bool; calls `cs::Engine`; state via StateCodec; `isBusesLayoutSupported` stereo out only.
-  3. Editor: programmatic vector illustration per family (D-013) drawn from data (string count, lengths); highlight the strings/positions of `voiceInfo` at 30 Hz via a lock-free snapshot; parameter panel; Scala load button (file chooser → loadScala).
+  2. Processor: owns one `cs::EngineHost` (D-024) and never calls `cs::Engine` directly; instrument-parameter changes call `requestInstrument` from a `juce::AsyncUpdater` on the message thread; a 1 Hz `juce::Timer` calls `collectGarbage`. AudioProcessorValueTreeState with one parameter per ParamId (IDs per D-023) (ranges from `paramRange`) + `instrument` choice (19) + `mpe` bool; calls `cs::Engine`; state via StateCodec; `isBusesLayoutSupported` stereo out only.
+  3. Editor: programmatic vector illustration per family (D-013) drawn from data (string count, lengths); highlight the strings/positions from `EngineHost::voiceSnapshot` at 30 Hz; parameter panel; Scala load button (file chooser → loadScala).
   4. Build all formats locally (Linux: VST3 + Standalone) and run `tests/ci/pluginval.sh` (Linux).
 - Outputs: plugin/CMakeLists.txt, plugin/src/*.cpp/.h; root CMakeLists.txt
 - Evidence produced: T-110 (Linux)
@@ -273,8 +279,8 @@
   1. Run `ctest --test-dir build -L perf --output-on-failure` (Release).
   2. If it fails: apply DR-03 in order, re-running after each change.
 - Outputs: changed sources only as required
-- Evidence produced: T-080
-- Done when: T-080 passes locally (Release).
+- Evidence produced: T-080, T-081
+- Done when: T-080 and T-081 pass locally (Release).
 - Checkpoint: S-015 done
 - On failure: DR-03.
 - Gate: none
@@ -286,11 +292,11 @@
 - Depends on: S-015
 - Inputs: D-006, D-012, D-012a, D-012b, D-014, plan/deps.lock.json, tests/TESTS.md
 - Actions:
-  1. `.github/workflows/ci.yml`: jobs `linux` (ubuntu-24.04), `windows` (windows-2025), `macos` (macos-26, universal), `macos-intel` (macos-26-intel, pluginval on the x86_64 slice), `fuzz` (ubuntu-24.04, clang, T-100/T-101 300 s each), `deps` (ubuntu-24.04: `python3 tools/osv_check.py`, `python3 tools/check_notice.py`). Every job first runs `sha256sum -c tests/FROZEN_MANIFEST.sha256` (on macOS `shasum -a 256 -c`). Build/test commands from plan/ENVIRONMENT.md; perf label run with `ctest -L perf --repeat until-pass:3` (pre-declared in D-008); pluginval via `tests/ci/pluginval.sh` (download URL from deps.lock.json); macOS also `tests/ci/auval.sh`. Upload VST3/AU/Standalone artifacts.
+  1. `.github/workflows/ci.yml`: jobs `tsan` (D-012), `linux` (ubuntu-24.04), `windows` (windows-2025), `macos` (macos-26, universal), `macos-intel` (macos-26-intel, pluginval on the x86_64 slice), `fuzz` (ubuntu-24.04, clang, T-100/T-101 300 s each), `deps` (ubuntu-24.04: `python3 tools/osv_check.py`, `python3 tools/check_notice.py`). Every job first runs `sha256sum -c tests/FROZEN_MANIFEST.sha256` (on macOS `shasum -a 256 -c`). Build/test commands from plan/ENVIRONMENT.md; macOS jobs first run `sudo xcode-select -s /Applications/Xcode_26.6.app` when that path exists (else log the default Xcode in DEVIATIONS.md, DR-11); perf label run with `ctest -L perf --repeat until-pass:3` (pre-declared in D-008); pluginval via `tests/ci/pluginval.sh` (download URL from deps.lock.json); macOS also `tests/ci/auval.sh`. Upload VST3/AU/Standalone artifacts.
   2. On first successful downloads, record the sha256 of `pluginval_macOS.zip` and `pluginval_Windows.zip` in plan/deps.lock.json (`sha256_macos_zip`, `sha256_windows_zip`) and make the workflow verify them.
   3. Push; iterate until all jobs are green.
 - Outputs: .github/workflows/ci.yml; plan/deps.lock.json
-- Evidence produced: T-110 (all OS), T-111, T-112, T-113, T-100, T-101 in CI
+- Evidence produced: T-110 (all OS), T-111, T-112, T-113, T-100, T-101, T-044 under TSAN in CI
 - Done when: one workflow run on the head of `impl/v0` has every job green; then open G-004.
 - Checkpoint: S-016 done (record run URL)
 - On failure: DR-04 (vulnerability), DR-06 (JUCE 9), DR-07 (Windows generator), DR-08 (auval); default retry otherwise.

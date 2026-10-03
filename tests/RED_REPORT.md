@@ -4,14 +4,15 @@ Build: GCC 13.3, CMake 4.4.3, Ninja 1.13.2, Release, JUCE be29c81 (9.0.3), Catch
 
 ## Result
 ```
-10% tests passed, 38 tests failed out of 42
+9% tests passed, 41 tests failed out of 45
 ```
 
 ## Failure reasons (all cs::NotImplemented thrown by stubs, or the absent NOTICE file)
 ```
    1  cs::NotImplemented("BowJunction::reflectionCoefficient")
    1  cs::NotImplemented("DispersionFilter::design")
-  13  cs::NotImplemented("Engine::Engine")
+  15  cs::NotImplemented("Engine::Engine")
+   1  cs::NotImplemented("EngineHost::EngineHost")
    1  cs::NotImplemented("FractionalDelayLine::prepare")
    1  cs::NotImplemented("HuntCrossleyContact")
    1  cs::NotImplemented("LossFilter::design")
@@ -24,7 +25,7 @@ Build: GCC 13.3, CMake 4.4.3, Ninja 1.13.2, Release, JUCE be29c81 (9.0.3), Catch
    2  cs::NotImplemented("loadScala")
    3  cs::NotImplemented("paramRange")
    6  cs::NotImplemented("spec")
-T-113: NOTICE missing JUCE | NOTICE missing JUCE
+T-113: NOTICE missing JUCE | ...
 ```
 
 ## Expected passes at red stage (test infrastructure, not requirement tests)
@@ -35,3 +36,6 @@ T-113: NOTICE missing JUCE | NOTICE missing JUCE
 - tests/ci/pluginval.sh with no plugin -> 'T-110 FAIL: plugin not found' (exit 1).
 - fuzz_scala / fuzz_state build with clang 18 (-fsanitize=fuzzer,address,undefined) and abort on cs::NotImplemented at the first input.
 - tests/ci/auval.sh: macOS only (not runnable in sandbox); fails with 'component not found' when the path is absent (script logic identical).
+
+## Re-verification after pre-mortem round 1 (T-044, T-045, T-081 added)
+All three fail cleanly: T-044 with NotImplemented("EngineHost::EngineHost"), T-045 and T-081 with NotImplemented("Engine::Engine"). A ThreadSanitizer build (`-fsanitize=thread`, CS_BUILD_PLUGIN=OFF) of cs_tests compiles and runs T-044 (fails with NotImplemented, no TSAN report).

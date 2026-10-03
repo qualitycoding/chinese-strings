@@ -8,7 +8,10 @@ target_link_libraries(cs_support_selftest PRIVATE cs_test_support Catch2::Catch2
 catch_discover_tests(cs_support_selftest ADD_TAGS_AS_LABELS)
 
 add_executable(cs_tests unit/test_instruments.cpp unit/test_dsp_blocks.cpp unit/test_tuning.cpp
-                        acoustic/test_string.cpp acoustic/test_engine.cpp)
+                        acoustic/test_string.cpp acoustic/test_engine.cpp
+                        acoustic/test_premortem.cpp)
+find_package(Threads REQUIRED)
+target_link_libraries(cs_tests PRIVATE Threads::Threads)
 target_link_libraries(cs_tests PRIVATE cs_core cs_test_support Catch2::Catch2WithMain)
 catch_discover_tests(cs_tests ADD_TAGS_AS_LABELS DISCOVERY_MODE PRE_TEST)
 
@@ -16,7 +19,7 @@ add_executable(cs_rt_tests rt/test_rt_safety.cpp)
 target_link_libraries(cs_rt_tests PRIVATE cs_core Catch2::Catch2WithMain)
 catch_discover_tests(cs_rt_tests ADD_TAGS_AS_LABELS DISCOVERY_MODE PRE_TEST)
 
-add_executable(cs_perf_tests perf/test_perf.cpp)
+add_executable(cs_perf_tests perf/test_perf.cpp perf/test_perf_tail.cpp)
 target_link_libraries(cs_perf_tests PRIVATE cs_core Catch2::Catch2WithMain)
 catch_discover_tests(cs_perf_tests ADD_TAGS_AS_LABELS DISCOVERY_MODE PRE_TEST)
 

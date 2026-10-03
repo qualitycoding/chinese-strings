@@ -18,3 +18,6 @@ Executed by Opus 5.5 in the same context with role separation (A-016 tier substi
 ## Pass 2 (fresh dry run of the amended plan)
 Re-read HANDOFF.md → PLAN.md S-001..S-017 with the question "could I execute this without asking?". Items found: 0.
 Mechanical: `plan_lint: 0 problems`.
+
+## Pass 3 (after pre-mortem round 1 changes, §4.4)
+Changed sections re-read: S-007 (EngineHost, FTZ, Done-when incl. T-044, T-045 expectation), S-008 Done-when (T-045), S-014 (EngineHost, D-023), S-015 (T-081), S-016 (tsan job, Xcode pin), HANDOFF counts, TRACEABILITY SC-19. Items found: 0. `plan_lint: 0 problems`.
