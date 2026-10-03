@@ -98,7 +98,7 @@
  },
  {
   "id": "C-004",
-  "claim": "JUCE 9.0.3 ships a juce_audio_processors_headless module (GUI-free processor code).",
+  "claim": "JUCE 9.0.3 ships a juce_audio_processors_headless module (GUI-free processor code). Spike S-01 compiled and linked a console app against juce_dsp + juce_audio_processors_headless on Linux x64 (GCC 13) in 237 s on 1 vCPU.",
   "kind": "software",
   "load_bearing": true,
   "sources": [
@@ -110,9 +110,18 @@
     "locator": "modules/juce_audio_processors_headless",
     "accessed": "2026-10-03",
     "tier": 1
+   },
+   {
+    "url": "research/spikes/S-01-juce9-headless/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-01",
+    "version": "9.0.3",
+    "locator": "OUTPUT.md",
+    "accessed": "2026-10-03",
+    "tier": 1
    }
   ],
-  "confidence": "single-source",
+  "confidence": "verified",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -377,7 +386,9 @@
   ],
   "confidence": "single-source",
   "evidence_class": "n/a",
-  "contradicted_by": [],
+  "contradicted_by": [
+   "C-031"
+  ],
   "informs": [
    "D-003",
    "D-004b"
@@ -775,6 +786,65 @@
   "informs": [
    "D-004a",
    "T-acoustic"
+  ]
+ },
+ {
+  "id": "C-030",
+  "claim": "A Karplus-Strong loop with a 2-tap averaging filter (0.5-sample delay) plus first-order allpass fractional delay tunes to within 0.02 cents at 293.66 Hz / 48 kHz.",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-01-juce9-headless/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-01",
+    "version": "",
+    "locator": "OUTPUT.md",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004b",
+   "T-pitch tolerance justification"
+  ]
+ },
+ {
+  "id": "C-031",
+  "claim": "Pipa fret counts vary by era/source (12-26 frets cited; 6 xiang + 12 frets on older design) versus ~30 on the modern instrument.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://wiki.ubc.ca/Course:PHYS341/Inharmonicity_in_Pipa_Strings",
+    "doi": "",
+    "title": "Inharmonicity in Pipa Strings (UBC wiki)",
+    "version": "",
+    "locator": "intro",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://timbreandorchestration.org/all-instruments/ensembles/chinese-orchestra/plucked-strings/in-depth",
+    "doi": "",
+    "title": "Plucked Strings in-depth",
+    "version": "",
+    "locator": "Pipa",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [
+   "C-014"
+  ],
+  "informs": [
+   "D-003 pipa fret map",
+   "T-layout"
   ]
  }
 ]
