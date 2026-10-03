@@ -12,8 +12,8 @@ Each leaf names what it informs. Status: open | answered (C-###) | pruned.
 | Q-P03 | Does JUCE 9 build headless on Linux CI (no X11) for DSP unit tests? Which modules? | D-005, T-unit | answered C-004 (S-01) |
 | Q-P04 | Unit test framework (Catch2 v3 vs GoogleTest) and CTest integration | D-005 | answered C-025 (decision pending) |
 | Q-P05 | Plugin validation tool, version, headless flags | D-006, T-integration | answered C-006, C-038 (S-02) |
-| Q-P06 | GitHub Actions runner images & toolchains for Win x64 / macOS universal / Linux x64 | D-006, CI | open |
-| Q-P07 | AU validation on macOS CI (auval) | D-006 | open |
+| Q-P06 | GitHub Actions runner images & toolchains for Win x64 / macOS universal / Linux x64 | D-006, CI | answered C-051, D-012 |
+| Q-P07 | AU validation on macOS CI (auval) | D-006 | partial C-052; explicit auval step in D-012 (verify round 4) |
 | Q-P08 | Scala .scl/.kbm format specification | D-010, T-security (fuzz) | answered C-042, C-043 |
 | Q-P09 | MPE support in JUCE (MPESynthesiser / MPEInstrument) and VST3 note expression | D-012 | open |
 | Q-P10 | Plugin state format & versioning (ValueTree XML vs binary) | D-009, T-security | open |
@@ -35,11 +35,11 @@ Each leaf names what it informs. Status: open | answered (C-###) | pruned.
 ## E-Q Quality, security, performance
 | ID | Question | Informs | Status |
 |---|---|---|---|
-| Q-Q01 | Fuzzing harness for parsers on Linux CI (libFuzzer/clang) | T-security | open |
-| Q-Q02 | Real-time safety checking (allocation/lock detection on audio thread) | T-perf, A-012 | open |
-| Q-Q03 | Benchmark normalisation on shared CI runners vs. A-012 reference laptop | D-008, T-perf | open |
+| Q-Q01 | Fuzzing harness for parsers on Linux CI (libFuzzer/clang) | T-security | answered C-053 (S-04) |
+| Q-Q02 | Real-time safety checking (allocation/lock detection on audio thread) | T-perf, A-012 | answered C-055 (S-05) |
+| Q-Q03 | Benchmark normalisation on shared CI runners vs. A-012 reference laptop | D-008, T-perf | answered C-054, D-008 |
 | Q-Q04 | Dependency vulnerability scanning for a C++/CMake (FetchContent) project | T-security | open |
-| Q-Q05 | UI illustrations: licence-clean source (programmatic SVG vs. images) | D-013 | open |
+| Q-Q05 | UI illustrations: licence-clean source (programmatic SVG vs. images) | D-013 | decided D-013 |
 
 ## Leaves added in round 1-2
 | ID | Question | Informs | Status |
@@ -47,7 +47,7 @@ Each leaf names what it informs. Status: open | answered (C-###) | pruned.
 | Q-D11 | Shamisen literature as sanxian analogy | D-003, D-004b | answered C-041 |
 | Q-D12 | Konghou organology / harp analogy | D-003, D-004c | partial C-040 |
 | Q-D13 | Tier C instruments' acoustic literature | D-003 | answered C-044 (none) |
-| Q-D14 | Organology for banhu, jinghu, liuqin, sihu, gehu, zhuihu, qinqin, xiaoruan, leiqin | D-003, D-011 | open (round 3) |
-| Q-D15 | DWG elasto-plastic bow junction: passivity and stability conditions | D-004a, T-stability | open (round 3) |
-| Q-P11 | JUCE 9 BREAKING_CHANGES affecting plugin, MPE, parameter APIs | D-001 | open (round 3) |
-| Q-P12 | GitHub-hosted runner images and compilers (Win/macOS/Linux) | D-006 | open (round 3) |
+| Q-D14 | Organology for banhu, jinghu, liuqin, sihu, gehu, zhuihu, qinqin, xiaoruan, leiqin | D-003, D-011 | answered C-039, C-045..C-049 |
+| Q-D15 | DWG elasto-plastic bow junction: passivity and stability conditions | D-004a, T-stability | open (round 4) |
+| Q-P11 | JUCE 9 BREAKING_CHANGES affecting plugin, MPE, parameter APIs | D-001 | answered C-050 |
+| Q-P12 | GitHub-hosted runner images and compilers (Win/macOS/Linux) | D-006 | answered C-051 |

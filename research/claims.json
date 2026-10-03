@@ -1124,7 +1124,7 @@
  },
  {
   "id": "C-039",
-  "claim": "Huqin tunings: erhu D4-A4; gaohu G4-D5 (a fourth above erhu); zhonghu a fifth apart at A3-E4 or G3-D4; jinghu is the highest huqin; gehu/diyingehu are 4-string fingerboard basses.",
+  "claim": "Huqin tunings: erhu d1-a1 (D4-A4); gaohu a fourth or fifth higher (G4-D5 or A4-E5); zhonghu a fourth or fifth lower (A3-E4 or G3-D4); banhu strings a fifth apart (G-D or A-E, register varies by school); jinghu silk strings in fifths and the highest huqin; sihu four strings tuned in pairs.",
   "kind": "software",
   "load_bearing": true,
   "sources": [
@@ -1163,6 +1163,33 @@
     "locator": "intro",
     "accessed": "2026-10-03",
     "tier": 3
+   },
+   {
+    "url": "https://amis.mircat.org/jamis/2002_118.pdf",
+    "doi": "",
+    "title": "Huqin in three British museum collections, J. American Musical Instrument Society (2002)",
+    "version": "",
+    "locator": "organology sections: erhu, gaohu, zhonghu, banhu, jinghu, sihu",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://collections.ed.ac.uk/mimed/record/18027",
+    "doi": "",
+    "title": "MIMEd banhu record",
+    "version": "",
+    "locator": "Performance technique",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://www.horniman.ac.uk/object/1975.42",
+    "doi": "",
+    "title": "Horniman jinghu note",
+    "version": "",
+    "locator": "collection note",
+    "accessed": "2026-10-03",
+    "tier": 2
    }
   ],
   "confidence": "corroborated",
@@ -1324,6 +1351,356 @@
   "contradicted_by": [],
   "informs": [
    "D-003 drops"
+  ]
+ },
+ {
+  "id": "C-045",
+  "claim": "Banhu: coconut-shell body (MIMEd example circumference 380 mm, depth 90 mm) faced with a thin wooden (tung) board instead of snakeskin; structurally the same family as the yehu (coconut body, wooden face).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://collections.ed.ac.uk/mimed/record/18027",
+    "doi": "",
+    "title": "MIMEd banhu",
+    "version": "",
+    "locator": "Technical description",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Banhu",
+    "doi": "",
+    "title": "Banhu (Wikipedia, citing Britannica and Stock 1993 JRMA 118(2):279)",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://amis.mircat.org/jamis/2002_118.pdf",
+    "doi": "",
+    "title": "Huqin in three British museum collections, J. American Musical Instrument Society (2002)",
+    "version": "",
+    "locator": "organology sections: erhu, gaohu, zhonghu, banhu, jinghu, sihu",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 banhu = yehu-derived body"
+  ]
+ },
+ {
+  "id": "C-046",
+  "claim": "Jinghu: small bamboo tube resonator (museum examples ~45-55 mm diameter, ~110 mm deep) with snakeskin face, silk strings tuned in fifths, no fingerboard.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://emuseum.nmmusd.org/objects/4969/jinghu",
+    "doi": "",
+    "title": "NMM jinghu 01529",
+    "version": "",
+    "locator": "Dimensions",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://collections.ed.ac.uk/mimed/record/119581",
+    "doi": "",
+    "title": "MIMEd jinghu 0441",
+    "version": "",
+    "locator": "Technical description",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://www.horniman.ac.uk/object/1975.42",
+    "doi": "",
+    "title": "Horniman 1975.42",
+    "version": "",
+    "locator": "note",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 jinghu"
+  ]
+ },
+ {
+  "id": "C-047",
+  "claim": "Sihu: huqin with four strings tuned in pairs over a snakeskin-faced (often hexagonal) wooden body.",
+  "kind": "software",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "https://collections.penn.museum/collections/object/194319",
+    "doi": "",
+    "title": "Penn Museum 51-46-140A",
+    "version": "",
+    "locator": "Description",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://amis.mircat.org/jamis/2002_118.pdf",
+    "doi": "",
+    "title": "Huqin in three British museum collections, J. American Musical Instrument Society (2002)",
+    "version": "",
+    "locator": "organology sections: erhu, gaohu, zhonghu, banhu, jinghu, sihu",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 sihu"
+  ]
+ },
+ {
+  "id": "C-048",
+  "claim": "Huqin construction detail: strings tied to the neck by a qianjin loop (sets vibrating length), fabric under the bridge suppresses wolf tones, no fingerboard, and the two strings are always stopped together.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://timbreandorchestration.org/all-instruments/ensembles/chinese-orchestra/bowed-strings/in-depth",
+    "doi": "",
+    "title": "Bowed Strings in-depth",
+    "version": "",
+    "locator": "Construction and acoustics",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "10.1250/ast.44.281",
+    "title": "Vibration analysis of a bowed string involving dynamics of a soundbox and neck ... Erhu",
+    "version": "",
+    "locator": "§3: noise suppressor (felt/sponge) suppresses wolf tone",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0)",
+    "version": "",
+    "locator": "§1: performer stops both strings simultaneously",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a finger model",
+   "A-008 UI"
+  ]
+ },
+ {
+  "id": "C-049",
+  "claim": "Liuqin: modern form has four strings and 29 frets (reformed in the 1950s); ruan family: four strings, 24 frets, zhongruan and daruan used in orchestras.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://web.stanford.edu/group/scme/cgi-bin/?p=229",
+    "doi": "",
+    "title": "Chinese Instruments (Stanford SCME)",
+    "version": "",
+    "locator": "Plucked",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://timbreandorchestration.org/all-instruments/ensembles/chinese-orchestra/plucked-strings/in-depth",
+    "doi": "",
+    "title": "Plucked Strings in-depth",
+    "version": "",
+    "locator": "Liuqin, Ruan",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-011"
+  ]
+ },
+ {
+  "id": "C-050",
+  "claim": "JUCE 9 breaking changes affecting this project: libxi-dev now required on Linux; Drawable no longer inherits Component; Drawable::createFromSVG signature changed (new SVG parser); AudioProcessor::createEditor behaviour change; VST3ClientExtensions API moves. No change to MPE or AudioProcessorValueTreeState is listed.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/BREAKING_CHANGES.md",
+    "doi": "",
+    "title": "JUCE BREAKING_CHANGES.md",
+    "version": "9.0.3",
+    "locator": "Version 9.0.0 section",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-001",
+   "D-013 UI drawing"
+  ]
+ },
+ {
+  "id": "C-051",
+  "claim": "GitHub-hosted runner labels (2026): ubuntu-24.04; windows-2025 (Visual Studio 2026 since 2026-06-15); macos-26 and macos-15 are arm64 (3 cores, 7 GB), macos-26-intel/macos-15-intel are x64.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/actions/runner-images",
+    "doi": "",
+    "title": "actions/runner-images README",
+    "version": "",
+    "locator": "Available Images",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://github.blog/changelog/2026-05-14-github-actions-upcoming-image-migrations",
+    "doi": "",
+    "title": "GitHub changelog 2026-05-14",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://www.tenki.cloud/blog/github-actions-runner-image-selection-2026",
+    "doi": "",
+    "title": "Runner image selection guide 2026",
+    "version": "",
+    "locator": "hardware",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-006 CI matrix"
+  ]
+ },
+ {
+  "id": "C-052",
+  "claim": "pluginval runs an 'auval' test stage as part of validation (seen in its test list), i.e. AU validation on macOS is covered by pluginval.",
+  "kind": "software",
+  "load_bearing": false,
+  "sources": [
+   {
+    "url": "research/spikes/S-02-vst3-pluginval/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-02",
+    "version": "",
+    "locator": "test list: 'pluginval / auval'",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-006"
+  ]
+ },
+ {
+  "id": "C-053",
+  "claim": "tuning-library @48422e2f parseSCLData/parseKBMData wrapped by the D-010 size-limited loader survived 1.76 M libFuzzer executions (ASan+UBSan, clang 18) with no findings.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-04-scala-fuzz/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-04",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-010",
+   "T-security"
+  ]
+ },
+ {
+  "id": "C-054",
+  "claim": "A representative DWG voice (2 strings with 4 dispersion allpasses + loss filter, 24-mode body, 25-section radiation) costs ~0.5 % of one sandbox x86-64 core per voice: 16 voices = 7.9 % at 48 kHz / 128-sample blocks (normalised load 0.137 against a fixed calibration loop).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-05-perf-rtsafety/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-05",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004",
+   "D-008",
+   "A-012 feasibility"
+  ]
+ },
+ {
+  "id": "C-055",
+  "claim": "A global operator new override in the test binary counts allocations made on the audio thread inside a guarded region; a negative control (deliberate allocation) is detected.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-05-perf-rtsafety/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-05",
+    "version": "",
+    "locator": "negative_control_allocs",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-009 RT-safety test",
+   "T-perf"
   ]
  }
 ]

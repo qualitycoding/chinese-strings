@@ -9,7 +9,7 @@
   },
   "phase": "1",
   "subphase": "1.3",
-  "research_round": 2,
+  "research_round": 3,
   "exploration_round": 0,
   "proof_review_round": 0,
   "premortem_round": 0,
@@ -20,10 +20,11 @@
     "1.1",
     "1.3.R1",
     "1.3.round-1",
-    "1.3.round-2"
+    "1.3.round-2",
+    "1.3.round-3"
   ],
   "pending": [
-    "1.3.round-3",
+    "1.3.round-4",
     "1.4",
     "2B",
     "2E",
@@ -44,12 +45,13 @@
   "artifacts": {
     "plan/PROFILE.md": "a21b77301d15bc4b0486bffe362572e88455f9342b09ea54010e909864471cf0",
     "plan/ASSUMPTIONS.md": "a7ecd2a58dfbd650a630289fd619d37666c770047abda170333fc46e215caad8",
-    "plan/DECISIONS.md": "b0cf60ca2988b25690cc94ebd96247fe5cd30a42800b58ceb0344359e1ea42cb",
-    "research/QUESTIONS.md": "046f35bca99e7010e0383ba3d93c16a6570e526e45628918e7bec1e33059297d",
-    "research/claims.json": "a3f4fa48bea4eacf5f2039d141098f4868bb4fe8692c204740cc003905e40b67",
-    "research/SOURCES.md": "a005307c75d4a00924d9fea6ea98908878380cb4ec4b15eae9f66ca1a6c636d7",
+    "plan/DECISIONS.md": "bffb943fb4d185cb91537859a5e4e08c7458a16dc6cad7b48e579d3a156ac4b2",
+    "research/QUESTIONS.md": "378d7bc14d093a5a54ce00209357fabb2e76290c416d3d80a96df7155e33c8ad",
+    "research/claims.json": "2beb9133d12ee08db3c987e304bbbf091a71a5569cd0780f84c404216b80c56e",
+    "research/SOURCES.md": "916bc237796db859984f9eee8f45bd7111938919297c90124d38dd6d869dfe0a",
     "research/rounds/round-1.md": "fb5de505904a9ac2af6e24f73ce2dcf26f218bed39401d54c6b806047f127dcc",
-    "research/rounds/round-2.md": "6e408cd528c35a5fc75f1e3a441c923b255c976316d7e73e6de4685c36ee417d"
+    "research/rounds/round-2.md": "6e408cd528c35a5fc75f1e3a441c923b255c976316d7e73e6de4685c36ee417d",
+    "research/rounds/round-3.md": "bf0b24e415da5deaabd62adcad0c0ef06e80ac29eb958a9ab01cdc13c08f9e66"
   },
   "environment": {
     "subagents": false,
@@ -87,12 +89,13 @@
     }
   ],
   "open_items": [
-    "Q-D14 Tier B organology",
-    "Q-D15 bow-junction passivity",
-    "Q-P06/P07/P12 CI runners + auval",
-    "Q-P11 JUCE 9 breaking changes",
-    "Q-Q02/Q03 RT-safety + perf normalisation",
-    "Q-Q05 UI art"
+    "Q-P09 MPE",
+    "Q-P10 state format",
+    "Q-D07 reference values",
+    "Q-D10/Q-D15 DWG + bow passivity",
+    "Q-Q04 OSV commit query",
+    "VS2026 generator",
+    "auval explicit verification"
   ],
-  "updated_at": "2026-10-03T15:36:27Z"
+  "updated_at": "2026-10-03T15:43:36Z"
 }
