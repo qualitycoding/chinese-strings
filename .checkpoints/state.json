@@ -1,0 +1,80 @@
+{
+  "run_id": "chinese-strings-vst-20261003",
+  "branch": "gen-20261003T134254Z-chinese-strings-vst",
+  "profiles": [
+    "software"
+  ],
+  "mode_flags": {
+    "software.deploys": false
+  },
+  "phase": "1",
+  "subphase": "1.1",
+  "research_round": 0,
+  "exploration_round": 0,
+  "proof_review_round": 0,
+  "premortem_round": 0,
+  "completed": [
+    "0.1",
+    "0.2",
+    "0.3"
+  ],
+  "pending": [
+    "1.1",
+    "1.3.R1",
+    "1.3.rounds",
+    "1.4",
+    "2B",
+    "2E",
+    "3",
+    "4",
+    "5"
+  ],
+  "not_applicable": [
+    "2A",
+    "2B.2",
+    "2B.4",
+    "2C",
+    "2D",
+    "R2b",
+    "OPERATIONS",
+    "G-001"
+  ],
+  "artifacts": {},
+  "environment": {
+    "subagents": false,
+    "tiers_available": [
+      "Opus 5.5"
+    ],
+    "github_identity": "qualitycoding",
+    "push": true,
+    "repo": "qualitycoding/chinese-strings",
+    "sandbox": {
+      "exec": true,
+      "pip": true,
+      "network": "allowlist (github, pypi, npm)",
+      "cpus": 1,
+      "ram_gb": 3
+    },
+    "implementer_credentials": [
+      {
+        "name": "GITHUB_TOKEN (Actions built-in)",
+        "scope": "contents:read for CI builds",
+        "sandbox_target": "n/a"
+      },
+      {
+        "name": "Apple Developer ID cert + notarisation creds",
+        "scope": "macOS signing (optional, only after G-002)",
+        "sandbox_target": "n/a"
+      }
+    ]
+  },
+  "tier_substitutions": [
+    {
+      "role": "Fable/Sonnet/Haiku + fresh-context agents",
+      "used": "Opus 5.5 (single context)",
+      "reason": "subagents unavailable in chat (A-016)"
+    }
+  ],
+  "open_items": [],
+  "updated_at": "2026-10-03T13:43:33Z"
+}
