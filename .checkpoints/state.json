@@ -9,7 +9,7 @@
   },
   "phase": "1",
   "subphase": "1.3",
-  "research_round": 1,
+  "research_round": 2,
   "exploration_round": 0,
   "proof_review_round": 0,
   "premortem_round": 0,
@@ -19,10 +19,10 @@
     "0.3",
     "1.1",
     "1.3.R1",
-    "1.3.round-1"
+    "1.3.round-1",
+    "1.3.round-2"
   ],
   "pending": [
-    "1.3.round-2",
     "1.3.round-3",
     "1.4",
     "2B",
@@ -44,10 +44,12 @@
   "artifacts": {
     "plan/PROFILE.md": "a21b77301d15bc4b0486bffe362572e88455f9342b09ea54010e909864471cf0",
     "plan/ASSUMPTIONS.md": "a7ecd2a58dfbd650a630289fd619d37666c770047abda170333fc46e215caad8",
-    "research/QUESTIONS.md": "5bbe6c9a87f2e6894232de754b0b4a6aef647d9990444399a223e266e7bc86ae",
-    "research/claims.json": "2e6c927a39df44bf4c70a67c35d889b4247b1c9b44dd31dc3b1cc215db05a488",
-    "research/SOURCES.md": "6c2ea6d3306ff69ce763d911e809f87189476adf0c532966f9e07b11d2eca1d7",
-    "research/rounds/round-1.md": "fb5de505904a9ac2af6e24f73ce2dcf26f218bed39401d54c6b806047f127dcc"
+    "plan/DECISIONS.md": "b0cf60ca2988b25690cc94ebd96247fe5cd30a42800b58ceb0344359e1ea42cb",
+    "research/QUESTIONS.md": "046f35bca99e7010e0383ba3d93c16a6570e526e45628918e7bec1e33059297d",
+    "research/claims.json": "a3f4fa48bea4eacf5f2039d141098f4868bb4fe8692c204740cc003905e40b67",
+    "research/SOURCES.md": "a005307c75d4a00924d9fea6ea98908878380cb4ec4b15eae9f66ca1a6c636d7",
+    "research/rounds/round-1.md": "fb5de505904a9ac2af6e24f73ce2dcf26f218bed39401d54c6b806047f127dcc",
+    "research/rounds/round-2.md": "6e408cd528c35a5fc75f1e3a441c923b255c976316d7e73e6de4685c36ee417d"
   },
   "environment": {
     "subagents": false,
@@ -85,9 +87,12 @@
     }
   ],
   "open_items": [
-    "D-001 provisional: JUCE 9.0.3 vs A-005 (8.0.x)",
-    "pipa fret contradiction C-014/C-031",
-    "yehu scope addition (D-003)"
+    "Q-D14 Tier B organology",
+    "Q-D15 bow-junction passivity",
+    "Q-P06/P07/P12 CI runners + auval",
+    "Q-P11 JUCE 9 breaking changes",
+    "Q-Q02/Q03 RT-safety + perf normalisation",
+    "Q-Q05 UI art"
   ],
-  "updated_at": "2026-10-03T13:51:56Z"
+  "updated_at": "2026-10-03T15:36:27Z"
 }

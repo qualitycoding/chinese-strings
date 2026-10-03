@@ -1,0 +1,13 @@
+# Decisions (D-###) — DRAFT, provisional until research saturation (Phase 1 end)
+
+| ID | Decision | Basis | Status |
+|---|---|---|---|
+| D-001 | Pin JUCE **9.0.3** (exact tag via FetchContent `GIT_TAG 9.0.3`). Rule: if a JUCE-9-specific defect blocks the build or pluginval on any CI OS and no 9.0.x patch fixes it within the step's retry policy, switch to 8.0.15, log in DEVIATIONS.md, continue. Supersedes the "8.0.x" detail of A-005 (intent — pinned JUCE, AGPLv3 — unchanged). | C-001..C-004, C-038, S-01, S-02 | provisional |
+| D-002 | Own source Apache-2.0; distributed binaries under AGPLv3. `NOTICE` lists: JUCE (AGPLv3), VST3 SDK (MIT), tuning-library (MIT), Catch2 (BSL-1.0), yehudafx26 (MIT, only if code is ported). pluginval (GPLv3) is CI tooling only, never distributed. | C-002, C-005, C-007, C-036, C-043 | provisional |
+| D-003 | Instrument list: see round-3 outcome. Interim: **measured-model** erhu, yehu, pipa, yueqin, zhongruan, daruan, guzheng, guqin, yangqin; **analogy-model** gaohu, zhonghu (erhu-scaled), sanxian (shamisen analogy), konghou (harp analogy), matouqin; **pending organology** banhu, jinghu, liuqin, sihu, gehu/diyingehu, zhuihu, qinqin, xiaoruan, leiqin; **dropped** rawap, dutar, satar, dombra, se, zhu, yazheng (no Tier 1/2 data, C-044). Yehu added beyond A-002 (best-documented model, C-010). | A-002, C-008..C-044 | provisional |
+| D-004 | Synthesis architecture: digital-waveguide strings with allpass dispersion and fractional-delay tuning; bowed = passive elasto-plastic bow junction; plucked = plectrum/nail contact excitation; yangqin = nonlinear hammer contact; bridge/body = modal bank from cited parameters; radiation = parallel 2nd-order IIR sections. No FD string solvers in the real-time path. | C-010, C-027, C-030, C-035, C-037 | provisional |
+| D-005 | DSP core is a JUCE-free C++20 static library (`cs_core`) tested with Catch2 v3.16.0 via CTest; the plugin layer links JUCE. | C-024, S-01 | provisional |
+| D-006 | Plugin validation: pluginval v1.0.4 release binary, `--strictness-level 10 --random-seed 42`, under `xvfb-run -a` on Linux. | C-006, C-038, S-02 | provisional |
+| D-007 | Only CC BY (or more permissive) recordings may produce committed fixtures; CC BY-NC/ND datasets are never downloaded by tests or committed. | C-020, C-021 | provisional |
+| D-010 | Scala import via surge-synthesizer/tuning-library pinned to commit 48422e2f014fcda8dd5d1a4678bb2674faf3bb3e, wrapped by a size-limited loader (max 64 KiB file, max 1024 notes) with a libFuzzer target. | C-042, C-043 | provisional |
+| D-011 | Tunings, string counts and fret maps are data tables (`data/instruments/*.json`) with a cited default per entry and user override. | C-014, C-031, C-039 | provisional |

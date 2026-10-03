@@ -184,9 +184,18 @@
     "locator": "v1.0.4",
     "accessed": "2026-10-03",
     "tier": 1
+   },
+   {
+    "url": "research/spikes/S-02-vst3-pluginval/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-02",
+    "version": "",
+    "locator": "--help output, v1.0.4 (built with JUCE 8.0.3)",
+    "accessed": "2026-10-03",
+    "tier": 1
    }
   ],
-  "confidence": "corroborated",
+  "confidence": "verified",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -199,8 +208,36 @@
   "claim": "Apache-2.0 code may be combined into a GPLv3/AGPLv3 work (one-way compatibility); the combined binary is then distributed under AGPLv3.",
   "kind": "policy",
   "load_bearing": true,
-  "sources": [],
-  "confidence": "inferred",
+  "sources": [
+   {
+    "url": "https://gnu.org/licenses/license-list.fr",
+    "doi": "",
+    "title": "FSF: Various Licenses and Comments about Them",
+    "version": "",
+    "locator": "#apache2 entry: compatible with GPLv3",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://apache.org/licenses/GPL-compatibility.html",
+    "doi": "",
+    "title": "ASF: Apache License v2.0 and GPL Compatibility",
+    "version": "",
+    "locator": "first paragraph",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://www.ebb.org/bkuhn/blog/2011/05/26/choose.html",
+    "doi": "",
+    "title": "Kuhn: Choosing a License",
+    "version": "",
+    "locator": "Apache-2.0 compatible with GPLv3 and AGPLv3",
+    "accessed": "2026-10-03",
+    "tier": 4
+   }
+  ],
+  "confidence": "corroborated",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -209,7 +246,7 @@
  },
  {
   "id": "C-008",
-  "claim": "Erhu: two steel strings (standard since 1958), python-skin membrane on a hexagonal soundbox ~10 cm across; lowest membrane mode reported around 2 kHz.",
+  "claim": "Erhu: two steel strings (standard since 1958), python-skin membrane on a hexagonal soundbox ~10 cm across; lowest membrane mode reported around 2 kHz. [R5: membrane-mode value contradicted by C-033; downgraded — must not drive a frozen numeric test.]",
   "kind": "software",
   "load_bearing": true,
   "sources": [
@@ -225,7 +262,9 @@
   ],
   "confidence": "single-source",
   "evidence_class": "n/a",
-  "contradicted_by": [],
+  "contradicted_by": [
+   "C-033"
+  ],
   "informs": [
    "D-003",
    "D-004a",
@@ -234,21 +273,21 @@
  },
  {
   "id": "C-009",
-  "claim": "Samejima (2023) extends bowed-string analysis to include soundbox and neck dynamics and applies it to physical-modelling synthesis of the erhu.",
+  "claim": "Samejima (2023) extends bowed-string analysis to include soundbox and neck dynamics and applies it to physical-modelling synthesis of the erhu. Model is FEM + Dormand-Prince RK time stepping (offline, not real-time); author reports only qualitative agreement with a real erhu.",
   "kind": "software",
   "load_bearing": true,
   "sources": [
    {
     "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
-    "doi": "",
+    "doi": "10.1250/ast.44.281",
     "title": "Vibration analysis of a bowed string involving dynamics of a soundbox and neck ... Erhu",
     "version": "",
-    "locator": "Acoust. Sci. Tech. 44(3) pp.281-291 (2023), abstract",
+    "locator": "full text read, §3-4, Tables 1-2, Figs 11,16",
     "accessed": "2026-10-03",
     "tier": 1
    }
   ],
-  "confidence": "single-source",
+  "confidence": "verified",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -269,9 +308,18 @@
     "locator": "DAFx-2026 abstract",
     "accessed": "2026-10-03",
     "tier": 2
+   },
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0)",
+    "version": "",
+    "locator": "full text read: §2-5, Table 1, §5.4",
+    "accessed": "2026-10-03",
+    "tier": 1
    }
   ],
-  "confidence": "single-source",
+  "confidence": "verified",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -370,7 +418,7 @@
  },
  {
   "id": "C-014",
-  "claim": "Pipa has four strings and about 30 frets giving ~3.5 octaves; Chen & Huang (2011) built a digital-waveguide pipa model with technique rules, validated by spectra and listening tests.",
+  "claim": "Pipa has four strings and about 30 frets giving ~3.5 octaves; Chen & Huang (2011) built a digital-waveguide pipa model with technique rules, validated by spectra and listening tests. [Fret count unresolved; D-003 makes the fret map a data table with a cited default and user override.]",
   "kind": "software",
   "load_bearing": true,
   "sources": [
@@ -730,11 +778,30 @@
  },
  {
   "id": "C-027",
-  "claim": "Bowed-string friction modelling literature: McIntyre, Schumacher & Woodhouse (1983) JASA 74(5) 1325-1345; Woodhouse (2004) thermal friction model, Acta Acustica 90, 579-589; Smith (1986) waveguide bow-string.",
+  "claim": "Bowed-string friction literature (corrected in R5): Woodhouse, 'Bowed string simulation using a thermal friction model', Acta Acustica united with Acustica 89, 355-368 (2003) [earlier inferred citation '90:579-589 (2004)' was wrong]; Dupont, Armstrong & Hayward elasto-plastic friction (Proc. ACC 2000, 1072-1077); Serafin et al. DWG elasto-plastic bowed string (SMAC 2003, 95-98); Matusiak, Chatziioannou & van Walstijn, passivity-guaranteed elasto-plastic bow (Front. Signal Process. 5:1525044, 2025).",
   "kind": "software",
   "load_bearing": true,
-  "sources": [],
-  "confidence": "inferred",
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0)",
+    "version": "",
+    "locator": "References [3],[4],[5],[9]",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "10.1250/ast.44.281",
+    "title": "Samejima, Vibration analysis of a bowed string ... Erhu",
+    "version": "",
+    "locator": "§2.1 eq.(1): Kishi hyperbolic friction curve (alternative static model)",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "corroborated",
   "evidence_class": "n/a",
   "contradicted_by": [],
   "informs": [
@@ -845,6 +912,418 @@
   "informs": [
    "D-003 pipa fret map",
    "T-layout"
+  ]
+ },
+ {
+  "id": "C-032",
+  "claim": "Erhu parameters (Samejima 2023): inner string D4 diameter 0.440 mm, T=51.68 N, E=200 GPa, rho=6577 kg/m3; outer A4 diameter 0.260 mm, T=51.50 N, rho=8363 kg/m3; python skin E=2.00 GPa, rho=700 kg/m3, h=0.8 mm, membrane tension 1176 N/m; soundbox wood E=12.4 GPa, rho=1050. Spike S-03 shows both strings imply the same vibrating length 387 mm (self-consistent).",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "10.1250/ast.44.281",
+    "title": "Samejima, Vibration analysis of a bowed string ... Erhu",
+    "version": "",
+    "locator": "Tables 1-2",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-03-string-params/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-03",
+    "version": "",
+    "locator": "rows 1-2",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 erhu preset",
+   "T-acoustic-param"
+  ]
+ },
+ {
+  "id": "C-033",
+  "claim": "In Samejima's coupled FE erhu model the python-skin-dominated modes are at 533.7, 848.2, 1091.7, 1165.5, 1428.2, 1476.6 Hz, and the soundbox velocity spectrum shows a broad peak at 500-1000 Hz (computed, not measured).",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "10.1250/ast.44.281",
+    "title": "Samejima, Vibration analysis of a bowed string ... Erhu",
+    "version": "",
+    "locator": "Fig. 11; Fig. 16(b)",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [
+   "C-008"
+  ],
+  "informs": [
+   "D-004a",
+   "R-risk: membrane-mode targets"
+  ]
+ },
+ {
+  "id": "C-034",
+  "claim": "Yehu parameters (Zheng et al. 2026, measured): silk strings L=0.38 m (loop to stub), rho 1250/1350 kg/m3, r 0.55/0.40 mm, T 50.61/64.29 N, E 1e10/9.5e9 Pa, sigma0 0.9754/1.5844 1/s, sigma1 0.0026/0.0032 m2/s; tuned F4/C5; bridge = 11 measured modes; radiation = 25-section parallel IIR. S-03: both strings imply 295 mm vibrating length (consistent).",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0)",
+    "version": "",
+    "locator": "Table 1; §4.2-4.3",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-03-string-params/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-03",
+    "version": "",
+    "locator": "rows 3-4",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 yehu preset",
+   "T-acoustic-param"
+  ]
+ },
+ {
+  "id": "C-035",
+  "claim": "The yehu FD model (2 strings, finger, elasto-plastic bow, Newton <=3 iterations with |F_N|>=0.05 N) ran 6.6x faster than real time at 44.1 kHz for one voice on an Apple M1 (i.e. ~15% of one core per voice).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://dafx.de/paper-archive/2026/papers/DAFx26_paper_43.pdf",
+    "doi": "",
+    "title": "Zheng, Darabundit & Scavone, Physical Model of the Chinese Yehu for Sound Synthesis (DAFx26, CC BY 4.0)",
+    "version": "",
+    "locator": "§5.4",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "single-source",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a",
+   "D-008",
+   "A-012 feasibility"
+  ]
+ },
+ {
+  "id": "C-036",
+  "claim": "The yehu reference implementation (C++ and MATLAB) is published at github.com/yehudafx26/yehudafx26 under the MIT licence (last push 2026-08-29).",
+  "kind": "policy",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/yehudafx26/yehudafx26",
+    "doi": "",
+    "title": "yehudafx26 repo metadata",
+    "version": "",
+    "locator": "license=MIT",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://yehudafx26.github.io/",
+    "doi": "",
+    "title": "Yehu companion page",
+    "version": "",
+    "locator": "Codes section",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-004a",
+   "D-014 third-party code"
+  ]
+ },
+ {
+  "id": "C-037",
+  "claim": "Silk-string stiffness shifts the yehu F4 fundamental by ~1.4 cents (B=1.6e-3); steel erhu strings by <=0.4 cents. Pitch control must compensate dispersion to meet the +/-3 cent criterion.",
+  "kind": "numerical",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "research/spikes/S-03-string-params/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-03",
+    "version": "",
+    "locator": "stiffness shift column",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "T-pitch",
+   "D-004*"
+  ]
+ },
+ {
+  "id": "C-038",
+  "claim": "JUCE 9.0.3 plug-in (VST3) builds on Ubuntu 24.04 only after installing the JUCE-documented GUI dependencies (libx11-dev, libxrandr-dev, libxinerama-dev, libxcursor-dev, libxcomposite-dev, libxext-dev, libxrender-dev, libxi-dev, libfreetype-dev, libfontconfig1-dev, libasound2-dev, ladspa-sdk); then a minimal synth passes pluginval v1.0.4 at strictness 5 and 10 under xvfb-run.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://github.com/juce-framework/JUCE/blob/9.0.3/docs/Linux%20Dependencies.md",
+    "doi": "",
+    "title": "JUCE Linux Dependencies",
+    "version": "9.0.3",
+    "locator": "Packages",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "research/spikes/S-02-vst3-pluginval/OUTPUT.md",
+    "doi": "",
+    "title": "Spike S-02",
+    "version": "",
+    "locator": "build log + pluginval results",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-006",
+   "plan/ENVIRONMENT.md",
+   "T-integration"
+  ]
+ },
+ {
+  "id": "C-039",
+  "claim": "Huqin tunings: erhu D4-A4; gaohu G4-D5 (a fourth above erhu); zhonghu a fifth apart at A3-E4 or G3-D4; jinghu is the highest huqin; gehu/diyingehu are 4-string fingerboard basses.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://catalog.lib.kyushu-u.ac.jp/opac_download_md/7420381/7420381.pdf",
+    "doi": "10.1250/ast.44.281",
+    "title": "Samejima, Vibration analysis of a bowed string ... Erhu",
+    "version": "",
+    "locator": "§3: erhu D4/A4",
+    "accessed": "2026-10-03",
+    "tier": 1
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Gaohu",
+    "doi": "",
+    "title": "Gaohu (Wikipedia)",
+    "version": "",
+    "locator": "Construction",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Zhonghu",
+    "doi": "",
+    "title": "Zhonghu (Wikipedia)",
+    "version": "",
+    "locator": "intro",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Huqin",
+    "doi": "",
+    "title": "Huqin (Wikipedia)",
+    "version": "",
+    "locator": "intro",
+    "accessed": "2026-10-03",
+    "tier": 3
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 tuning presets"
+  ]
+ },
+ {
+  "id": "C-040",
+  "claim": "Modern konghou: two rows of strings (36-38 per row, 72-76 total) over per-string bridges on both sides of the soundbox; paired strings tuned to the same note; per-string bridges allow left-hand bends/vibrato; pedal modulation; silk-wound steel strings. No acoustic measurement study located — model by analogy with the concert harp.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://english.visitbeijing.com.cn/article/47OMmcilGFm",
+    "doi": "",
+    "title": "Konghou (Visit Beijing)",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://harpspectrum.org/folk/Chinese_Harp_Konghou.shtml",
+    "doi": "",
+    "title": "The Chinese Harp (Harp Spectrum)",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 3
+   },
+   {
+    "url": "https://so12.tci-thaijo.org/index.php/MADPIADP/article/view/6529",
+    "doi": "",
+    "title": "From court instrument to cultural revival: Konghou",
+    "version": "",
+    "locator": "abstract: dual-row 76-string",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003",
+   "D-004c"
+  ]
+ },
+ {
+  "id": "C-041",
+  "claim": "A real-time FDTD physical model of the shamisen (stiff strings, bridge, 2D tensioned membrane) exists (SMC 2021, Zenodo 10.5281/zenodo.5042901) — usable as the analogy basis for the sanxian (skin-faced plucked lute).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://doi.org/10.5281/zenodo.5042901",
+    "doi": "10.5281/zenodo.5042901",
+    "title": "Real-Time Implementation of the Shamisen using Finite Difference Schemes",
+    "version": "",
+    "locator": "abstract",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://vbn.aau.dk/files/445884956/SMC_2021_paper_41.pdf",
+    "doi": "",
+    "title": "SMC 2021 paper 41",
+    "version": "",
+    "locator": "§2",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 sanxian",
+   "D-004b"
+  ]
+ },
+ {
+  "id": "C-042",
+  "claim": "Scala .scl format: text file, '!' comment lines, first non-comment line = description, second = note count, then one pitch per line (contains '.' => cents, else ratio a/b or integer), degree 0 implicit; ratios must support numerators/denominators up to 2^31-1.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://docs.rs/surgefilter-comb/0.2.0-alpha.0/surgefilter_comb/imports/struct.Scale.html",
+    "doi": "",
+    "title": "Surge docs quoting huygens-fokker scl_format",
+    "version": "",
+    "locator": "Scale doc comment",
+    "accessed": "2026-10-03",
+    "tier": 2
+   },
+   {
+    "url": "https://help.ableton.com/hc/articles/10998372840220-ASCL-Specification",
+    "doi": "",
+    "title": "Ableton ASCL spec (SCL superset)",
+    "version": "",
+    "locator": "header comments",
+    "accessed": "2026-10-03",
+    "tier": 2
+   }
+  ],
+  "confidence": "corroborated",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-010",
+   "T-security fuzz"
+  ]
+ },
+ {
+  "id": "C-043",
+  "claim": "Surge's tuning-library (header-only C++ .scl/.kbm parser and tuning mapper) is MIT-licensed, active (main @ 48422e2f, 2026-09-04), tags release_1.1.0.",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://api.github.com/repos/surge-synthesizer/tuning-library",
+    "doi": "",
+    "title": "tuning-library repo metadata",
+    "version": "",
+    "locator": "license=MIT; commits API",
+    "accessed": "2026-10-03",
+    "tier": 1
+   }
+  ],
+  "confidence": "verified",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-010"
+  ]
+ },
+ {
+  "id": "C-044",
+  "claim": "No Tier 1/2 acoustic or modelling literature was found for the rawap, dutar, satar, dombra, se, zhu or yazheng (searches logged in round-2).",
+  "kind": "software",
+  "load_bearing": true,
+  "sources": [
+   {
+    "url": "https://inlibrary.uz/index.php/mead/article/view/117603",
+    "doi": "",
+    "title": "Dutar acoustics (student article)",
+    "version": "",
+    "locator": "",
+    "accessed": "2026-10-03",
+    "tier": 4
+   }
+  ],
+  "confidence": "inferred",
+  "evidence_class": "n/a",
+  "contradicted_by": [],
+  "informs": [
+   "D-003 drops"
   ]
  }
 ]
