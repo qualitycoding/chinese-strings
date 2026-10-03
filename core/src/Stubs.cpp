@@ -41,30 +41,4 @@ int Engine::activeVoiceCount() const noexcept { return 0; }
 int Engine::voiceInfo(VoiceInfo*, int) const noexcept { return 0; }
 }
 namespace cs::dsp {
-void LossFilter::design(double, double, double, double, double) { CS_NI("LossFilter::design"); }
-double LossFilter::magnitudeAt(double) const { CS_NI("LossFilter::magnitudeAt"); }
-double LossFilter::targetMagnitudeAt(double) const { CS_NI("LossFilter::targetMagnitudeAt"); }
-float LossFilter::process(float x) noexcept { return x; }
-void LossFilter::reset() noexcept {}
-void DispersionFilter::design(double, double, double, int) { CS_NI("DispersionFilter::design"); }
-double DispersionFilter::phaseDelaySamples(double) const { CS_NI("DispersionFilter::phaseDelaySamples"); }
-std::vector<double> DispersionFilter::coefficients() const { CS_NI("DispersionFilter::coefficients"); }
-float DispersionFilter::process(float x) noexcept { return x; }
-void DispersionFilter::reset() noexcept {}
-void FractionalDelayLine::prepare(int) { CS_NI("FractionalDelayLine::prepare"); }
-void FractionalDelayLine::setDelay(double) { CS_NI("FractionalDelayLine::setDelay"); }
-float FractionalDelayLine::process(float x) noexcept { return x; }
-void FractionalDelayLine::reset() noexcept {}
-double BowJunction::reflectionCoefficient(double, double, double, const FrictionParams&) { CS_NI("BowJunction::reflectionCoefficient"); }
-HuntCrossleyContact::HuntCrossleyContact(double K, double a, double b) : K_(K), alpha_(a), beta_(b) { CS_NI("HuntCrossleyContact"); }
-double HuntCrossleyContact::force(double, double) const { CS_NI("HuntCrossleyContact::force"); }
-void ModalBank::configure(double, const std::vector<ModeSpec>&) { CS_NI("ModalBank::configure"); }
-float ModalBank::process(float x) noexcept { return x; }
-void ModalBank::reset() noexcept {}
-void WaveguideString::prepare(double, double) { CS_NI("WaveguideString::prepare"); }
-void WaveguideString::configure(const StringSpec&) { CS_NI("WaveguideString::configure"); }
-void WaveguideString::setFrequency(double) { CS_NI("WaveguideString::setFrequency"); }
-void WaveguideString::pluck(double, double) { CS_NI("WaveguideString::pluck"); }
-float WaveguideString::tick(float) noexcept { return 0.0f; }
-std::vector<double> WaveguideString::lossCoefficientsMagnitude(int) const { CS_NI("WaveguideString::lossCoefficientsMagnitude"); }
 }
