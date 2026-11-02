@@ -12,3 +12,11 @@ G-001: N/A (`math`/`computational` inactive — PROFILE.md).
 | G-003d | End of S-012 (yangqin) | `renders/G-003d/*.wav` (single strikes across range, rolls, damped) + report.md | same for yangqin | same | proceed → S-013; changes → as G-003a; stop → halt |
 | G-004 | End of S-016 (CI green on all jobs) | CI run URL; downloadable VST3/AU/Standalone artifacts; `GATE-G-004.md` checklist: load in Reaper on Windows 11 (A-017), instrument selector, UI highlight (SC-17), MPE in Reaper VST3 (D-015), 16-voice CPU on the human's laptop (A-012 absolute check) | 1. Plugin loads and plays in Reaper? 2. UI highlights correct strings? 3. MPE works in Reaper VST3? (if not: accept as documented limitation?) 4. CPU acceptable? | `proceed`; `proceed-with-limitation: <text>` (recorded in README "Known limitations"); `fix: <text>` (implementer fixes within existing frozen tests, re-opens G-004); `stop` | proceed / proceed-with-limitation → S-017; fix → back to the relevant step; stop → halt |
 | G-002 | End of S-017 (release candidate ready) | PR from the implementation branch to `main` (opened, not merged); release-notes draft; artifact checksums; licence summary (D-002) | Merge to `main`? Create tag `v0.1.0` and a GitHub Release with CI artifacts? Sign/notarise macOS (needs Apple credentials)? | `merge-only`; `merge-and-release`; `hold` | The implementer never merges, tags or releases itself. On any response it records the response in DEVIATIONS.md and halts — the human performs merge/tag/release. |
+
+## G-003 — split learning stores (v3.9)
+
+Lessons and knowledge are pushed to **separate** stores: the `Lessons`
+repository and the `knowledge` repository. G-003 requests the destinations at
+plan close; **do-not-push** either store until human sign-off; the documented
+bundle fallback applies when sign-off is withheld. Store publication never holds
+up the repository amendment's completion record.

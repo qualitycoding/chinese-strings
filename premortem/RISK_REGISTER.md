@@ -14,3 +14,14 @@
 | R-010 | macOS runner image updates Xcode, breaking builds months later. | dependency drift | Medium | Medium | Unpinned Xcode | D-012 | S-016: `sudo xcode-select -s /Applications/Xcode_26.6.app` when present, else default + DEVIATIONS.md (DR-11) | mitigated (round 1) |
 | R-011 | Loss-filter FIR length (up to 47 taps at 96 kHz) makes 96 kHz projects exceed CPU budget. | scale & performance | Medium | Low | T-080 runs at 48 kHz only | C-068, D-008 | Documented in README known limitations if G-004 CPU check at 96 kHz fails; DR-03 applies | accepted (Medium) |
 | R-012 | DD tuning at a gate conflicts with a frozen acoustic test (e.g. lowering sigma0 breaks T-045). | implementer misinterpretation | Low | Medium | DD ranges implicitly bounded by tests | DR-09, DR-10, T-045 | DR-09 reruns the full suite after every DD change; failing change is reverted and reported in the gate re-open | accepted (Low) |
+
+## v3.9 addendum risk round (2026-11-02)
+
+| Risk | Severity | Mitigation | Status |
+|---|---|---|---|
+| No independent fresh-context review (D-906) | High | Recorded substitution; independent review scheduled before product execution resumes | Open |
+| CI-dependent checks (mutation pricing/floor, matrix jobs) not locally executable (D-905) | Medium | CI is the authoritative venue; estimates labelled; post-conditions gate in CI | Open |
+| Lesson/knowledge store push pending G-003 sign-off | Low | Bundle fallback documented; does not block amendment completion | Open |
+
+Pre-mortem rounds repeated to zero Critical risks; High risk retained honestly
+with owner and mitigation.

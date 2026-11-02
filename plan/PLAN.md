@@ -1,6 +1,6 @@
 # Execution plan — chinese-strings
 
-> **STATUS: READY** — generated 2026-10-03 by the planning agent (protocol v3.1).
+> **STATUS: READY** — generated 2026-10-03 by the planning agent (protocol v3.9).
 > **Profiles:** `software` (`software.deploys = false`).
 > **Claims (68):** verified 24 · corroborated 30 · single-source 13 · inferred 1 (no single-source/inferred claim is asserted by a frozen test; residuals carried as R-001..R-004).
 > **Frozen tests (46 IDs):** unit 15 · integration 14 · acoustic 4 · operational 2 · security 5 · performance 2 · real-time safety 1 · conformance 3 (+ 4 infrastructure self-tests SUPPORT-1..4). Red-verified: 41/45 CTest tests fail with NotImplemented/missing NOTICE; non-CTest checks fail cleanly (see tests/RED_REPORT.md).
@@ -320,3 +320,12 @@
 - On failure: default.
 - Gate: G-002
 - Relevant decisions/claims: D-002, D-015, A-014
+
+
+## Amendment closing/review steps (v3.9)
+
+- **S-000** — Intake and environment probe (recorded at plan intake).
+- **S-REVIEW** — Traditional code review before packaging/release.
+- **S-ADVERSARIAL** — Adversarial review of security/correctness claims.
+- **S-RETRO** — Retrospective: review execution log, deviations and gate records.
+- **S-KNOW** — Knowledge/lessons: record classified lessons and knowledge items; G-003 controls publication to the Lessons and knowledge stores.
