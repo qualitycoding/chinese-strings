@@ -1,5 +1,7 @@
 # HANDOFF — chinese-strings implementation
 
+
+Reading order: `HANDOFF.md` → `ADDENDUM-PLAN-V3.9.md` → `plan/PLAN.md`. Later protocol amendments take precedence only where the gap ledger says so.
 ## Purpose
 Implement `chinese-strings`: a JUCE 9 plugin (VST3, AU on macOS, Standalone) that physically models 19 Chinese stringed instruments with digital waveguides, passing a frozen test suite, then stop at human gates. You (the implementer) need no access to the planner or the conversation that produced this plan.
 
