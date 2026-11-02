@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "repository": "qualitycoding/chinese-strings",
+  "branch": "impl/v0",
+  "candidate_commit": "",
+  "gate_id": "G-003a",
+  "round": 1,
+  "test_type": "realism",
+  "status": "blocked",
+  "prerequisites": [
+    {"id": "P-1", "status": "satisfied", "evidence": ".impl/state.json remains S-008 awaiting-G-003a; original public G-003a evidence (renders/G-003a/report.md + SHA256SUMS on impl/v0, WAVs on evidence/G-003a) is retained and not overwritten; S-009 not started."},
+    {"id": "P-2", "status": "satisfied", "evidence": "Pair tools vendored at scripts/make_blind_pairs.py (sha256 3c4f75854e2a692d3a77460d470e289be405c2166bbc30abbd4eeb053d6824c7) and scripts/score_blind.py (sha256 f2d9ea5c76a731fd3dd553d698a9f1a92b393d272f6ea898e6a9e5cbde49defa) from qualitycoding/skills @ 7915c7b7e0cecbee5116e72a4cf5699383df5983; CLI verified."},
+    {"id": "P-3", "status": "satisfied", "evidence": "G-003a-d plan amendments recorded (D-025): audio semantics, <=8/12 condition, three-round maximum, evidence marker, common schema, responses iterate / proceed-with-rescope added; DD-only tuning restrictions (DR-10) preserved."},
+    {"id": "P-4", "status": "missing", "evidence": "Blind realism references for the eight bowed instruments (matched performances with redistribution-compatible licence, source URLs, checksums) are not secured. Per-family base seed 20261105."},
+    {"id": "P-5", "status": "awaiting", "evidence": "Human response to the original non-blind G-003a gate is still pending; the blind bundle supplements, and does not bypass or replace, GATE-G-003a.md."}
+  ],
+  "frozen_metrics": [],
+  "reference": {"kind": "real bowed-Chinese-instrument recordings (redistribution-compatible), per instrument", "source_urls_or_ids": [], "licence": "not secured", "checksums": ""},
+  "candidate_renders": {"manifest": "renders/G-003a/report.md (existing non-blind evidence retained)", "checksums": "renders/G-003a/SHA256SUMS"},
+  "pair_builder": {
+    "script": "scripts/make_blind_pairs.py",
+    "commit": "7915c7b7e0cecbee5116e72a4cf5699383df5983",
+    "seed": 20261105,
+    "pairs": 12,
+    "window": "start",
+    "seconds": 1.0,
+    "rms_db": -23.0,
+    "fade_seconds": 0.01,
+    "sample_rate": 44100
+  },
+  "evidence": {"branch": "impl/v0", "commit": "", "bundle": "", "sha256sums": ""},
+  "answers": {"ordered": "", "submitted_at": "", "same_side_count": 0},
+  "score": {"correct": 0, "total": 12, "one_sided_p": null, "pass_condition": "correct <= 8 && acceptable per-instrument demos && no unresolved qualitative finding"},
+  "qualitative_findings": [],
+  "iterations": [],
+  "response": {"value": "", "recorded_at": "", "file": ""},
+  "resume": {"next_step": "secure redistribution-compatible references for the active family gate; build 12 onset pairs per gate with base seed 20261105; score; the pair manifest must identify instrument/technique coverage so a family-wide score cannot hide a badly failing instrument", "checkpoint_file": ".impl/state.json", "checkpoint_commit": "", "execution_log_commit": ""},
+  "blocked_reason": "Missing realism references (P-4). Never silently score against placeholder voices; do not substitute a different instrument and call it equivalent."
+}

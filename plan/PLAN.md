@@ -15,6 +15,7 @@
 - **Implementer checkpoint:** `.impl/state.json` = `{"step":"S-###","status":"started|done","commit":"<sha>","updated_at":"<UTC>"}`; write `started` before a step's first action and `done` after its Done-when passes; commit it with the step's last commit (message `S-###: <title>`).
 - **Idempotency:** every step can be re-run from its first action; generated files are overwritten, never appended. Partial completion is detected by `.impl/state.json` = `started` for that step: re-run the step from action 1.
 - **Retry policy (default, unless the step overrides):** fix-and-rerun the failing command up to 5 attempts; then apply DR-02 (DECISIONS.md, "Decision rules").
+- **Blind listening (D-025):** each family gate G-003a–d additionally requires a scored blind round per the augmentation in plan/GATES.md (12 onset pairs, base seed 20261105, ≤8/12, max three rounds); records live under `listening/G-00Xx/round-00N/`; `scripts/make_blind_pairs.py` and `scripts/score_blind.py` are vendored canonical tools. Missing references block the scored round — never score against placeholder voices.
 - **DD** = design default (plan/INSTRUMENT_DATA.md). Only DD rows may be tuned, only at a G-003x response, logged per DR-10.
 
 ---

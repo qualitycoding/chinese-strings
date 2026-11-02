@@ -33,3 +33,9 @@
 HANDOFF.md, plan/{PROFILE,PLAN,ASSUMPTIONS,DECISIONS,GATES,ENVIRONMENT,TRACEABILITY}.md,
 research/{QUESTIONS.md,claims.json,SOURCES.md,rounds/,spikes/}, tests/, tests/FROZEN_MANIFEST.sha256,
 premortem/{round-N.md,RISK_REGISTER.md}, .checkpoints/state.json.
+
+## Mode flags (addendum)
+
+| Flag | Value | Justification |
+|---|---|---|
+| `audio` | true | Blind listening realism protocol at G-003a–d (D-025); listener-evaluated sound is in scope, frozen tests unchanged. |

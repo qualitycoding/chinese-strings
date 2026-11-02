@@ -55,3 +55,4 @@ Every test docstring/TEST_CASE tag lists its SC-, C-, D- or A- IDs. Infrastructu
 | T-090..T-092, T-101 | SC-11 |
 | T-110, T-111 | SC-14 |
 | T-112, T-113 | SC-15 |
+| Blind listening protocol at G-003a–d (audio, D-025) | plan/GATES.md augmentation, GATE-G-003a.md appendix, listening/G-003a/round-001/result.json, scripts/make_blind_pairs.py + score_blind.py | S-008/S-010/S-011/S-012 gates | vendored script hashes; blocked round record; original evidence untouched |

@@ -37,3 +37,34 @@ Per-instrument values need a small change to make those constants per-instrument
 
 - Please revoke both GitHub tokens when we are finished. The second one is still on the sandbox.
 - Bowed instrument design takes ~2 s per instrument per sample rate the first time it is selected (see report, Known issues 5).
+
+## Blind listening augmentation (D-025, appended 2026-11-03)
+
+The original evidence above is unchanged. This section adds the common blind
+listening protocol required before the next scored round; it does not bypass
+G-003a and does not overwrite the original evidence.
+
+- **Frozen settings:** 12 matched onset pairs per active family gate,
+  `--window start`, 1.0 s clips, common RMS −23 dBFS (pre-match levels
+  retained), 10 ms fades, 44.1 kHz PCM-24 WAV; pass = ≤ 8/12 correct AND
+  acceptable per-instrument demos AND no unresolved qualitative finding;
+  maximum three rounds per gate; base seed 20261105, rounds 2/3 add
+  1000/2000 independently within each family gate; p-value reported exactly.
+- **Pair manifest** identifies instrument/technique coverage so a
+  family-wide score cannot hide a badly failing instrument.
+- **References:** matched redistribution-compatible real recordings per
+  instrument; never a substituted instrument, never placeholder voices.
+  **Not yet secured — round-001 blocked**
+  (`listening/G-003a/round-001/result.json`).
+- **Tooling:** `scripts/make_blind_pairs.py` / `scripts/score_blind.py`
+  vendored from qualitycoding/skills @
+  7915c7b7e0cecbee5116e72a4cf5699383df5983 (sha256 3c4f75854e2a…d6824c7 /
+  f2d9ea5c76a1…e49defa).
+- **Additional blind questions:** which side is the real instrument; is each
+  instrument recognisable; which DD row or general mechanism explains any
+  retuning need. Existing weak-spot questions remain.
+- **Additional allowed responses (G-003a–d):** `iterate: <notes>` (non-DD
+  finding: general algorithm change via the normal plan/test amendment path,
+  never undocumented DD edits; new seed) and `proceed-with-rescope: <text>`
+  (narrowed claim). `proceed-with-changes` remains the DD-tuning iteration
+  response (DR-10); DD rows may be edited only under DR-10.

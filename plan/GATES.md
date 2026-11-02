@@ -12,3 +12,37 @@ G-001: N/A (`math`/`computational` inactive — PROFILE.md).
 | G-003d | End of S-012 (yangqin) | `renders/G-003d/*.wav` (single strikes across range, rolls, damped) + report.md | same for yangqin | same | proceed → S-013; changes → as G-003a; stop → halt |
 | G-004 | End of S-016 (CI green on all jobs) | CI run URL; downloadable VST3/AU/Standalone artifacts; `GATE-G-004.md` checklist: load in Reaper on Windows 11 (A-017), instrument selector, UI highlight (SC-17), MPE in Reaper VST3 (D-015), 16-voice CPU on the human's laptop (A-012 absolute check) | 1. Plugin loads and plays in Reaper? 2. UI highlights correct strings? 3. MPE works in Reaper VST3? (if not: accept as documented limitation?) 4. CPU acceptable? | `proceed`; `proceed-with-limitation: <text>` (recorded in README "Known limitations"); `fix: <text>` (implementer fixes within existing frozen tests, re-opens G-004); `stop` | proceed / proceed-with-limitation → S-017; fix → back to the relevant step; stop → halt |
 | G-002 | End of S-017 (release candidate ready) | PR from the implementation branch to `main` (opened, not merged); release-notes draft; artifact checksums; licence summary (D-002) | Merge to `main`? Create tag `v0.1.0` and a GitHub Release with CI artifacts? Sign/notarise macOS (needs Apple credentials)? | `merge-only`; `merge-and-release`; `hold` | The implementer never merges, tags or releases itself. On any response it records the response in DEVIATIONS.md and halts — the human performs merge/tag/release. |
+
+## Blind listening augmentation for G-003a–d (D-025)
+
+Applies to every family gate G-003a/b/c/d as a supplement to the rows above;
+original evidence bundles remain in force and are not overwritten.
+
+- **audio = true** (plan/PROFILE.md); realism comparison against matched,
+  redistribution-compatible real recordings of each named instrument. Never
+  substitute a different instrument; never score against placeholder voices.
+- **Frozen settings:** 12 onset pairs per active gate, `--window start`,
+  1.0 s clips, common RMS −23 dBFS, 10 ms fades, 44.1 kHz PCM-24; pass =
+  ≤ 8/12 correct AND acceptable per-instrument demos AND no unresolved
+  qualitative finding; maximum three rounds per gate; base seed 20261105
+  per gate, rounds 2/3 add 1000/2000; p-value reported exactly; general
+  mechanisms only, never per-clip constants.
+- **Pair manifest** must identify instrument/technique coverage per
+  instrument so a family-wide score cannot hide a badly failing instrument.
+- **Result record:** `listening/G-00Xx/round-00N/` per the common schema;
+  the native checkpoint and `.impl/state.json` gain a listening pointer, not
+  a replacement.
+- **Questions:** which side is the real instrument; is each instrument
+  recognisable; which DD row or general mechanism explains any retuning
+  need. Existing weak-spot questions and known issues are reported even when
+  the score passes.
+- **Allowed responses (additions):** `iterate: <notes>` — non-DD findings
+  requiring a general algorithm change via the normal plan/test amendment
+  path (never undocumented DD edits); new seed. `proceed-with-rescope:
+  <text>` — narrowed claim. `proceed-with-changes` remains the DD-tuning
+  iteration response; DD rows editable only under DR-10, cited values never
+  changed (DR-02).
+- **Resume mapping unchanged:** proceed on the active gate resumes exactly
+  the step named in the G-003a–d table.
+- **Status:** G-003a round-001 blocked — references not secured
+  (`listening/G-003a/round-001/result.json`).

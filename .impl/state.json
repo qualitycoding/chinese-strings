@@ -1,1 +1,1 @@
-{"step":"S-008","status":"awaiting-G-003a","commit":"","updated_at":"2026-10-03T00:00:00Z"}
+{"step": "S-008", "status": "awaiting-G-003a", "commit": "", "updated_at": "2026-10-03T00:00:00Z", "listening_gate": {"gate_id": "G-003a", "round": 1, "status": "blocked", "evidence": "listening/G-003a/round-001/result.json", "decision": "D-025"}}

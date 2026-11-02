@@ -49,3 +49,19 @@
 | DR-13 | Disk/RAM exhaustion during build (e.g. 1-vCPU/3 GB sandbox) | Build with `-j1`, delete `build*/` and rebuild; if still exhausted, move the step to CI-only execution and record in DEVIATIONS.md. |
 
 **Default rule (verbatim from protocol §3.2):** Choose the most reversible option that does not expand scope, log it in `DEVIATIONS.md` with rationale, and continue — **unless** it touches frozen tests, security, data integrity, a public interface, research integrity, or (upward) a statement's evidence class, in which case halt and write `BLOCKED.md`.
+- **D-025** — Blind listening protocol amendment for G-003a–d: `audio =
+  true`; common blind settings frozen (12 onset pairs per gate,
+  `--window start`, 1.0 s, −23 dBFS RMS, 10 ms fades, 44.1 kHz PCM-24,
+  ≤8/12 plus per-instrument demo acceptability, max three rounds, base seed
+  20261105 per gate); result records under `listening/G-00Xx/round-00N/`;
+  responses `iterate` and `proceed-with-rescope` added alongside the
+  existing `proceed-with-changes` (DD-only, DR-10 preserved; algorithm
+  changes take the normal plan/test amendment path, never undocumented DD
+  edits). Vendored canonical pair tools from qualitycoding/skills @
+  7915c7b7e0cecbee5116e72a4cf5699383df5983: scripts/make_blind_pairs.py
+  sha256 3c4f75854e2a692d3a77460d470e289be405c2166bbc30abbd4eeb053d6824c7;
+  scripts/score_blind.py sha256
+  f2d9ea5c76a731fd3dd553d698a9f1a92b393d272f6ea898e6a9e5cbde49defa.
+  Repository remains at S-008 awaiting-G-003a; original G-003a evidence
+  retained; G-003a round-001 blocked on missing redistribution-compatible
+  references (`listening/G-003a/round-001/result.json`).
